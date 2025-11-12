@@ -493,87 +493,191 @@ header .container {
     border-radius: 0 0 24px 24px;
 }
 
-/* Emotion-specific shapes for products */
-.product-shape[data-emotion="happy"] .shape-face {
+/* Emotion-specific shapes for products with variations */
+/* Happy - 4 variants */
+.product-shape[data-emotion="happy"][data-variant="1"] .shape-face {
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     background: rgba(255, 235, 59, 0.3);
 }
+.product-shape[data-emotion="happy"][data-variant="2"] .shape-face {
+    border-radius: 55% 45% 40% 60% / 55% 45% 65% 35%;
+    background: rgba(255, 235, 59, 0.3);
+}
+.product-shape[data-emotion="happy"][data-variant="3"] .shape-face {
+    border-radius: 65% 35% 35% 65% / 50% 40% 60% 50%;
+    background: rgba(255, 235, 59, 0.3);
+}
+.product-shape[data-emotion="happy"][data-variant="4"] .shape-face {
+    border-radius: 50% 50% 25% 75% / 65% 35% 65% 35%;
+    background: rgba(255, 235, 59, 0.3);
+}
 
-.product-shape[data-emotion="sad"] .shape-face {
+/* Sad - 4 variants */
+.product-shape[data-emotion="sad"][data-variant="1"] .shape-face {
     border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
     background: rgba(92, 138, 168, 0.3);
 }
+.product-shape[data-emotion="sad"][data-variant="2"] .shape-face {
+    border-radius: 45% 55% 45% 55% / 35% 35% 65% 65%;
+    background: rgba(92, 138, 168, 0.3);
+}
+.product-shape[data-emotion="sad"][data-variant="3"] .shape-face {
+    border-radius: 55% 45% 55% 45% / 25% 35% 75% 65%;
+    background: rgba(92, 138, 168, 0.3);
+}
+.product-shape[data-emotion="sad"][data-variant="4"] .shape-face {
+    border-radius: 48% 52% 48% 52% / 32% 28% 72% 68%;
+    background: rgba(92, 138, 168, 0.3);
+}
 
-.product-shape[data-emotion="calm"] .shape-face {
+/* Calm - 4 variants */
+.product-shape[data-emotion="calm"][data-variant="1"] .shape-face {
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     background: rgba(129, 212, 250, 0.3);
 }
+.product-shape[data-emotion="calm"][data-variant="2"] .shape-face {
+    border-radius: 35% 65% 65% 35% / 35% 35% 65% 65%;
+    background: rgba(129, 212, 250, 0.3);
+}
+.product-shape[data-emotion="calm"][data-variant="3"] .shape-face {
+    border-radius: 25% 75% 75% 25% / 28% 32% 68% 72%;
+    background: rgba(129, 212, 250, 0.3);
+}
+.product-shape[data-emotion="calm"][data-variant="4"] .shape-face {
+    border-radius: 32% 68% 68% 32% / 32% 28% 72% 68%;
+    background: rgba(129, 212, 250, 0.3);
+}
 
-.product-shape[data-emotion="anxious"] .shape-face {
+/* Anxious - 4 variants */
+.product-shape[data-emotion="anxious"][data-variant="1"] .shape-face {
     border-radius: 45% 55% 50% 50% / 55% 45% 55% 45%;
     background: rgba(149, 117, 205, 0.3);
 }
+.product-shape[data-emotion="anxious"][data-variant="2"] .shape-face {
+    border-radius: 48% 52% 47% 53% / 52% 48% 52% 48%;
+    background: rgba(149, 117, 205, 0.3);
+}
+.product-shape[data-emotion="anxious"][data-variant="3"] .shape-face {
+    border-radius: 42% 58% 53% 47% / 58% 42% 58% 42%;
+    background: rgba(149, 117, 205, 0.3);
+}
+.product-shape[data-emotion="anxious"][data-variant="4"] .shape-face {
+    border-radius: 47% 53% 48% 52% / 53% 47% 53% 47%;
+    background: rgba(149, 117, 205, 0.3);
+}
 
-.product-shape[data-emotion="angry"] .shape-face {
+/* Angry - 4 variants */
+.product-shape[data-emotion="angry"][data-variant="1"] .shape-face {
     border-radius: 35% 65% 35% 65% / 65% 35% 65% 35%;
     background: rgba(229, 57, 53, 0.3);
 }
+.product-shape[data-emotion="angry"][data-variant="2"] .shape-face {
+    border-radius: 38% 62% 32% 68% / 62% 38% 68% 32%;
+    background: rgba(229, 57, 53, 0.3);
+}
+.product-shape[data-emotion="angry"][data-variant="3"] .shape-face {
+    border-radius: 32% 68% 38% 62% / 68% 32% 62% 38%;
+    background: rgba(229, 57, 53, 0.3);
+}
+.product-shape[data-emotion="angry"][data-variant="4"] .shape-face {
+    border-radius: 37% 63% 33% 67% / 63% 37% 67% 33%;
+    background: rgba(229, 57, 53, 0.3);
+}
 
-.product-shape[data-emotion="excited"] .shape-face {
+/* Excited - 4 variants */
+.product-shape[data-emotion="excited"][data-variant="1"] .shape-face {
     border-radius: 50% 50% 20% 80% / 80% 20% 80% 20%;
     background: rgba(255, 110, 199, 0.3);
 }
+.product-shape[data-emotion="excited"][data-variant="2"] .shape-face {
+    border-radius: 55% 45% 25% 75% / 75% 25% 85% 15%;
+    background: rgba(255, 110, 199, 0.3);
+}
+.product-shape[data-emotion="excited"][data-variant="3"] .shape-face {
+    border-radius: 45% 55% 15% 85% / 85% 15% 75% 25%;
+    background: rgba(255, 110, 199, 0.3);
+}
+.product-shape[data-emotion="excited"][data-variant="4"] .shape-face {
+    border-radius: 52% 48% 22% 78% / 78% 22% 82% 18%;
+    background: rgba(255, 110, 199, 0.3);
+}
 
-.product-shape[data-emotion="nostalgic"] .shape-face {
+/* Nostalgic - 4 variants */
+.product-shape[data-emotion="nostalgic"][data-variant="1"] .shape-face {
     border-radius: 55% 45% 45% 55% / 45% 55% 45% 55%;
     background: rgba(179, 157, 219, 0.3);
 }
+.product-shape[data-emotion="nostalgic"][data-variant="2"] .shape-face {
+    border-radius: 52% 48% 48% 52% / 48% 52% 48% 52%;
+    background: rgba(179, 157, 219, 0.3);
+}
+.product-shape[data-emotion="nostalgic"][data-variant="3"] .shape-face {
+    border-radius: 58% 42% 42% 58% / 42% 58% 42% 58%;
+    background: rgba(179, 157, 219, 0.3);
+}
+.product-shape[data-emotion="nostalgic"][data-variant="4"] .shape-face {
+    border-radius: 53% 47% 47% 53% / 47% 53% 47% 53%;
+    background: rgba(179, 157, 219, 0.3);
+}
 
-.product-shape[data-emotion="hopeful"] .shape-face {
+/* Hopeful - 4 variants */
+.product-shape[data-emotion="hopeful"][data-variant="1"] .shape-face {
     border-radius: 50% 50% 50% 50% / 60% 40% 60% 40%;
     background: rgba(129, 199, 132, 0.3);
 }
-
-/* Emotion-specific backgrounds for product cards */
-.product-shape[data-emotion="happy"] ~ .product-info,
-.product-shape[data-emotion="happy"] {
-    --product-bg: #fff9e6;
+.product-shape[data-emotion="hopeful"][data-variant="2"] .shape-face {
+    border-radius: 48% 52% 52% 48% / 58% 42% 58% 42%;
+    background: rgba(129, 199, 132, 0.3);
+}
+.product-shape[data-emotion="hopeful"][data-variant="3"] .shape-face {
+    border-radius: 52% 48% 48% 52% / 62% 38% 62% 38%;
+    background: rgba(129, 199, 132, 0.3);
+}
+.product-shape[data-emotion="hopeful"][data-variant="4"] .shape-face {
+    border-radius: 51% 49% 49% 51% / 59% 41% 61% 39%;
+    background: rgba(129, 199, 132, 0.3);
 }
 
-.product-shape[data-emotion="sad"] ~ .product-info,
-.product-shape[data-emotion="sad"] {
-    --product-bg: #e6f3ff;
-}
+/* Emotion-specific backgrounds for product cards with variations */
+.product-shape[data-emotion="happy"][data-variant="1"] { --product-bg: #fff9e6; }
+.product-shape[data-emotion="happy"][data-variant="2"] { --product-bg: #fffaeb; }
+.product-shape[data-emotion="happy"][data-variant="3"] { --product-bg: #fffbed; }
+.product-shape[data-emotion="happy"][data-variant="4"] { --product-bg: #fff8e1; }
 
-.product-shape[data-emotion="calm"] ~ .product-info,
-.product-shape[data-emotion="calm"] {
-    --product-bg: #e1f5fe;
-}
+.product-shape[data-emotion="sad"][data-variant="1"] { --product-bg: #e6f3ff; }
+.product-shape[data-emotion="sad"][data-variant="2"] { --product-bg: #e8f4ff; }
+.product-shape[data-emotion="sad"][data-variant="3"] { --product-bg: #e3f2fd; }
+.product-shape[data-emotion="sad"][data-variant="4"] { --product-bg: #e1f1ff; }
 
-.product-shape[data-emotion="anxious"] ~ .product-info,
-.product-shape[data-emotion="anxious"] {
-    --product-bg: #ede7f6;
-}
+.product-shape[data-emotion="calm"][data-variant="1"] { --product-bg: #e1f5fe; }
+.product-shape[data-emotion="calm"][data-variant="2"] { --product-bg: #e0f7fa; }
+.product-shape[data-emotion="calm"][data-variant="3"] { --product-bg: #e3f6fd; }
+.product-shape[data-emotion="calm"][data-variant="4"] { --product-bg: #dff4fb; }
 
-.product-shape[data-emotion="angry"] ~ .product-info,
-.product-shape[data-emotion="angry"] {
-    --product-bg: #ffcdd2;
-}
+.product-shape[data-emotion="anxious"][data-variant="1"] { --product-bg: #ede7f6; }
+.product-shape[data-emotion="anxious"][data-variant="2"] { --product-bg: #efe9f7; }
+.product-shape[data-emotion="anxious"][data-variant="3"] { --product-bg: #ebe5f5; }
+.product-shape[data-emotion="anxious"][data-variant="4"] { --product-bg: #f0eaf8; }
 
-.product-shape[data-emotion="excited"] ~ .product-info,
-.product-shape[data-emotion="excited"] {
-    --product-bg: #ffe6f0;
-}
+.product-shape[data-emotion="angry"][data-variant="1"] { --product-bg: #ffcdd2; }
+.product-shape[data-emotion="angry"][data-variant="2"] { --product-bg: #ffcfd4; }
+.product-shape[data-emotion="angry"][data-variant="3"] { --product-bg: #ffcbd0; }
+.product-shape[data-emotion="angry"][data-variant="4"] { --product-bg: #ffd1d5; }
 
-.product-shape[data-emotion="nostalgic"] ~ .product-info,
-.product-shape[data-emotion="nostalgic"] {
-    --product-bg: #f3e5f5;
-}
+.product-shape[data-emotion="excited"][data-variant="1"] { --product-bg: #ffe6f0; }
+.product-shape[data-emotion="excited"][data-variant="2"] { --product-bg: #ffe8f2; }
+.product-shape[data-emotion="excited"][data-variant="3"] { --product-bg: #ffe4ee; }
+.product-shape[data-emotion="excited"][data-variant="4"] { --product-bg: #ffeaf4; }
 
-.product-shape[data-emotion="hopeful"] ~ .product-info,
-.product-shape[data-emotion="hopeful"] {
-    --product-bg: #d4f1d4;
-}
+.product-shape[data-emotion="nostalgic"][data-variant="1"] { --product-bg: #f3e5f5; }
+.product-shape[data-emotion="nostalgic"][data-variant="2"] { --product-bg: #f5e7f7; }
+.product-shape[data-emotion="nostalgic"][data-variant="3"] { --product-bg: #f1e3f3; }
+.product-shape[data-emotion="nostalgic"][data-variant="4"] { --product-bg: #f4e6f6; }
+
+.product-shape[data-emotion="hopeful"][data-variant="1"] { --product-bg: #d4f1d4; }
+.product-shape[data-emotion="hopeful"][data-variant="2"] { --product-bg: #d6f2d6; }
+.product-shape[data-emotion="hopeful"][data-variant="3"] { --product-bg: #d2f0d2; }
+.product-shape[data-emotion="hopeful"][data-variant="4"] { --product-bg: #d5f1d5; }
 
 .product-card .product-image {
     background: var(--product-bg, #f5f1e8);

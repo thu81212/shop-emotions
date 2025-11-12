@@ -82,9 +82,11 @@ function createProductCard(product) {
     ).join('');
 
     // Create a shape representation based on the product's primary emotion
+    // Add variation based on product ID to prevent repetitive shapes
     const primaryEmotion = product.emotions[0];
+    const shapeVariant = (product.id % 4) + 1; // Creates variants 1-4
     const shapeHTML = `
-        <div class="product-shape" data-emotion="${primaryEmotion}">
+        <div class="product-shape" data-emotion="${primaryEmotion}" data-variant="${shapeVariant}">
             <div class="shape-face">
                 <div class="shape-eyes">
                     <div class="shape-eye"></div>
