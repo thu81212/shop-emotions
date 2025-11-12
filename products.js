@@ -154,15 +154,6 @@ const products = [
         image: ""
     },
     {
-        id: 18,
-        name: "Time Capsule",
-        price: 1.50,
-        description: "Emotions preserved from a world that no longer exists",
-        emotions: ["nostalgic", "sad"],
-        emoji: "⏳",
-        image: ""
-    },
-    {
         id: 19,
         name: "Edge of Worry",
         price: 0.75,
