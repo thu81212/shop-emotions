@@ -269,6 +269,14 @@ checkoutBtn.addEventListener('click', () => {
     document.body.style.overflow = 'auto';
 });
 
+// Journal button functionality
+const journalBtn = document.getElementById('journalBtn');
+if (journalBtn) {
+    journalBtn.addEventListener('click', () => {
+        alert('📔 Journal feature coming soon!\n\nYour emotional receipts will be saved here for reflection and tracking your emotional journey over time.');
+    });
+}
+
 // Local Storage
 function saveCart() {
     localStorage.setItem('shopEmotionsCart', JSON.stringify(cart));
