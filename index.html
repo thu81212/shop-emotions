@@ -27,6 +27,9 @@
     <section class="emotion-filter">
         <div class="container">
             <h2>How are you feeling today?</h2>
+            <button class="detect-emotion-btn" id="detectEmotionBtn">
+                📸 Detect My Emotion
+            </button>
             <div class="emotion-buttons">
                 <button class="emotion-btn active" data-emotion="all">
                     <div class="face">
@@ -142,6 +145,27 @@
         </div>
     </section>
 
+    <!-- Emotion Detection Modal -->
+    <div class="emotion-detection-modal" id="emotionModal">
+        <div class="emotion-detection-content">
+            <div class="emotion-detection-header">
+                <h2>Detect Your Emotion</h2>
+                <button class="close-btn" id="closeEmotionModal">&times;</button>
+            </div>
+            <div class="video-container">
+                <video id="videoElement" autoplay playsinline></video>
+                <canvas id="overlayCanvas"></canvas>
+            </div>
+            <div class="detection-status" id="detectionStatus">
+                <p>Position your face in the camera...</p>
+            </div>
+            <div class="detection-result" id="detectionResult" style="display: none;">
+                <h3>We detected you're feeling: <span id="detectedEmotion"></span></h3>
+                <p>Adding products to your cart...</p>
+            </div>
+        </div>
+    </div>
+
     <!-- Shopping Cart Modal -->
     <div class="cart-modal" id="cartModal">
         <div class="cart-content">
@@ -170,7 +194,11 @@
         </div>
     </footer>
 
+    <!-- Face API JS for emotion detection -->
+    <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+
     <script src="products.js"></script>
     <script src="app.js"></script>
+    <script src="emotion-detection.js"></script>
 </body>
 </html>
