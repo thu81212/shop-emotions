@@ -145,7 +145,7 @@ header .container {
 /* Organic blob shapes for each emotion */
 .emotion-btn[data-emotion="all"] {
     border-radius: 50% 50% 50% 50% / 45% 55% 45% 55%;
-    background: #ffd93d; /* Bright yellow - inclusive, cheerful */
+    background: #ffd93d; /* Bright yellow - inclusive, neutral */
 }
 
 .emotion-btn[data-emotion="happy"] {
@@ -153,9 +153,24 @@ header .container {
     background: #ffeb3b; /* Sunny yellow - joy, happiness */
 }
 
+.emotion-btn[data-emotion="sad"] {
+    border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
+    background: #5c8aa8; /* Deep blue - sadness, melancholy */
+}
+
 .emotion-btn[data-emotion="calm"] {
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    background: #64b5f6; /* Soft blue - peaceful, serene */
+    background: #81d4fa; /* Soft sky blue - peaceful, serene */
+}
+
+.emotion-btn[data-emotion="anxious"] {
+    border-radius: 45% 55% 50% 50% / 55% 45% 55% 45%;
+    background: #9575cd; /* Purple - worry, tension */
+}
+
+.emotion-btn[data-emotion="angry"] {
+    border-radius: 40% 60% 40% 60% / 60% 40% 60% 40%;
+    background: #e57373; /* Red - anger, frustration */
 }
 
 .emotion-btn[data-emotion="excited"] {
@@ -163,24 +178,14 @@ header .container {
     background: #ff6ec7; /* Hot pink - energetic, enthusiastic */
 }
 
-.emotion-btn[data-emotion="romantic"] {
-    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-    background: #ff8fa3; /* Rose pink - love, affection */
+.emotion-btn[data-emotion="nostalgic"] {
+    border-radius: 55% 45% 45% 55% / 45% 55% 45% 55%;
+    background: #b39ddb; /* Soft purple - bittersweet memories */
 }
 
-.emotion-btn[data-emotion="energetic"] {
-    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-    background: #ff7043; /* Orange-red - active, dynamic, powerful */
-}
-
-.emotion-btn[data-emotion="cozy"] {
-    border-radius: 60% 40% 40% 60% / 70% 70% 30% 30%;
-    background: #ddb892; /* Warm tan - comfort, warmth, snuggly */
-}
-
-.emotion-btn[data-emotion="adventurous"] {
-    border-radius: 70% 30% 50% 50% / 30% 60% 40% 70%;
-    background: #66bb6a; /* Fresh green - nature, exploration, outdoors */
+.emotion-btn[data-emotion="hopeful"] {
+    border-radius: 50% 50% 50% 50% / 60% 40% 60% 40%;
+    background: #81c784; /* Soft green - optimism, possibility */
 }
 
 /* Face elements */
@@ -216,13 +221,35 @@ header .container {
 }
 
 /* Different expressions for each emotion */
+/* All - neutral face */
+.emotion-btn[data-emotion="all"] .mouth {
+    width: 20px;
+    height: 10px;
+}
+
 /* Happy - big smile */
 .emotion-btn[data-emotion="happy"] .mouth {
     width: 24px;
     height: 12px;
 }
 
-/* Calm - relaxed smile */
+/* Sad - frown with downturned eyes */
+.emotion-btn[data-emotion="sad"] .eye {
+    width: 7px;
+    height: 7px;
+}
+
+.emotion-btn[data-emotion="sad"] .mouth {
+    width: 20px;
+    height: 10px;
+    border: 2px solid #2d2d2d;
+    border-bottom: none;
+    border-top: 2px solid #2d2d2d;
+    border-radius: 20px 20px 0 0;
+    transform: translateY(4px);
+}
+
+/* Calm - relaxed smile, peaceful eyes */
 .emotion-btn[data-emotion="calm"] .eye {
     height: 4px;
     border-radius: 2px;
@@ -233,7 +260,65 @@ header .container {
     height: 6px;
 }
 
-/* Excited - star eyes */
+/* Anxious - worried expression */
+.emotion-btn[data-emotion="anxious"] .eye {
+    width: 6px;
+    height: 9px;
+    border-radius: 50%;
+}
+
+.emotion-btn[data-emotion="anxious"] .mouth {
+    width: 16px;
+    height: 4px;
+    border-radius: 0;
+    border: 1.5px solid #2d2d2d;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    background: #2d2d2d;
+}
+
+/* Angry - furrowed brow, angry expression */
+.emotion-btn[data-emotion="angry"] .eyes {
+    position: relative;
+}
+
+.emotion-btn[data-emotion="angry"] .eyes::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 12px;
+    height: 3px;
+    background: #2d2d2d;
+    border-radius: 2px;
+    transform: rotate(-15deg);
+}
+
+.emotion-btn[data-emotion="angry"] .eyes::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    right: 0;
+    width: 12px;
+    height: 3px;
+    background: #2d2d2d;
+    border-radius: 2px;
+    transform: rotate(15deg);
+}
+
+.emotion-btn[data-emotion="angry"] .eye {
+    width: 8px;
+    height: 8px;
+}
+
+.emotion-btn[data-emotion="angry"] .mouth {
+    width: 18px;
+    height: 8px;
+}
+
+/* Excited - star eyes, open mouth */
 .emotion-btn[data-emotion="excited"] .eye {
     width: 10px;
     height: 10px;
@@ -247,61 +332,29 @@ header .container {
     border-top: 2px solid #2d2d2d;
 }
 
-/* Romantic - heart eyes */
-.emotion-btn[data-emotion="romantic"] .eye {
-    width: 9px;
-    height: 9px;
-    background: #ff6b9d;
-    transform: rotate(45deg);
-    border-radius: 50% 0 50% 50%;
-}
-
-.emotion-btn[data-emotion="romantic"] .mouth {
-    width: 20px;
-    height: 10px;
-}
-
-/* Energetic - wide open eyes */
-.emotion-btn[data-emotion="energetic"] .eye {
-    width: 10px;
-    height: 10px;
-}
-
-.emotion-btn[data-emotion="energetic"] .mouth {
-    width: 20px;
-    height: 14px;
-}
-
-/* Cozy - sleepy eyes */
-.emotion-btn[data-emotion="cozy"] .eye {
-    height: 3px;
-    border-radius: 2px;
-}
-
-.emotion-btn[data-emotion="cozy"] .mouth {
-    width: 16px;
-    height: 8px;
-}
-
-/* Adventurous - determined look */
-.emotion-btn[data-emotion="adventurous"] .eyes {
+/* Nostalgic - wistful, looking away */
+.emotion-btn[data-emotion="nostalgic"] .eyes {
     gap: 14px;
 }
 
-.emotion-btn[data-emotion="adventurous"] .eye {
-    width: 9px;
+.emotion-btn[data-emotion="nostalgic"] .eye {
+    width: 7px;
+    height: 7px;
+}
+
+.emotion-btn[data-emotion="nostalgic"] .mouth {
+    width: 18px;
+    height: 7px;
+}
+
+/* Hopeful - gentle smile, bright eyes */
+.emotion-btn[data-emotion="hopeful"] .eye {
+    width: 8px;
     height: 9px;
 }
 
-.emotion-btn[data-emotion="adventurous"] .mouth {
+.emotion-btn[data-emotion="hopeful"] .mouth {
     width: 22px;
-    height: 8px;
-    border-radius: 0 0 16px 16px;
-}
-
-/* All - simple happy face */
-.emotion-btn[data-emotion="all"] .mouth {
-    width: 20px;
     height: 10px;
 }
 
