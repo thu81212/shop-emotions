@@ -64,6 +64,13 @@ header .container {
     font-weight: 300;
 }
 
+nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.journal-btn,
 .cart-btn {
     background: rgba(255, 255, 255, 0.2);
     border: 2px solid rgba(255, 255, 255, 0.3);
@@ -79,9 +86,24 @@ header .container {
     backdrop-filter: blur(10px);
 }
 
+.journal-btn:hover,
 .cart-btn:hover {
     background: rgba(255, 255, 255, 0.3);
     transform: translateY(-2px);
+}
+
+.journal-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.journal-icon-fallback {
+    font-size: 1.25rem;
+}
+
+.journal-text {
+    font-weight: 600;
 }
 
 .cart-icon {
