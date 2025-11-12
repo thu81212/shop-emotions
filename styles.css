@@ -145,42 +145,42 @@ header .container {
 /* Organic blob shapes for each emotion */
 .emotion-btn[data-emotion="all"] {
     border-radius: 50% 50% 50% 50% / 45% 55% 45% 55%;
-    background: var(--accent-yellow);
+    background: #ffd93d; /* Bright yellow - inclusive, cheerful */
 }
 
 .emotion-btn[data-emotion="happy"] {
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    background: #ffd93d;
+    background: #ffeb3b; /* Sunny yellow - joy, happiness */
 }
 
 .emotion-btn[data-emotion="calm"] {
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    background: #5b9bd5;
+    background: #64b5f6; /* Soft blue - peaceful, serene */
 }
 
 .emotion-btn[data-emotion="excited"] {
     border-radius: 50% 50% 20% 80% / 80% 20% 80% 20%;
-    background: #ff6b9d;
+    background: #ff6ec7; /* Hot pink - energetic, enthusiastic */
 }
 
 .emotion-btn[data-emotion="romantic"] {
     border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-    background: #ff9bb5;
+    background: #ff8fa3; /* Rose pink - love, affection */
 }
 
 .emotion-btn[data-emotion="energetic"] {
     border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-    background: #ff6b35;
+    background: #ff7043; /* Orange-red - active, dynamic, powerful */
 }
 
 .emotion-btn[data-emotion="cozy"] {
     border-radius: 60% 40% 40% 60% / 70% 70% 30% 30%;
-    background: #ffb6c1;
+    background: #ddb892; /* Warm tan - comfort, warmth, snuggly */
 }
 
 .emotion-btn[data-emotion="adventurous"] {
     border-radius: 70% 30% 50% 50% / 30% 60% 40% 70%;
-    background: #4caf50;
+    background: #66bb6a; /* Fresh green - nature, exploration, outdoors */
 }
 
 /* Face elements */
