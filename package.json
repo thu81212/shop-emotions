@@ -1,0 +1,12 @@
+{
+  "name": "shop-emotions",
+  "version": "1.0.0",
+  "description": "An e-commerce website where you shop based on your emotions",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8080"
+  },
+  "keywords": ["ecommerce", "emotions", "shopping"],
+  "author": "",
+  "license": "MIT"
+}

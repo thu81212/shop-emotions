@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Emotions - Find Products That Match Your Mood</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Shop Emotions</h1>
+                <p class="tagline">Shop by how you feel</p>
+            </div>
+            <nav>
+                <button class="cart-btn" id="cartBtn">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Emotion Filter Section -->
+    <section class="emotion-filter">
+        <div class="container">
+            <h2>How are you feeling today?</h2>
+            <div class="emotion-buttons">
+                <button class="emotion-btn active" data-emotion="all">
+                    <span class="emoji">✨</span>
+                    <span>All</span>
+                </button>
+                <button class="emotion-btn" data-emotion="happy">
+                    <span class="emoji">😊</span>
+                    <span>Happy</span>
+                </button>
+                <button class="emotion-btn" data-emotion="calm">
+                    <span class="emoji">😌</span>
+                    <span>Calm</span>
+                </button>
+                <button class="emotion-btn" data-emotion="excited">
+                    <span class="emoji">🤩</span>
+                    <span>Excited</span>
+                </button>
+                <button class="emotion-btn" data-emotion="romantic">
+                    <span class="emoji">💝</span>
+                    <span>Romantic</span>
+                </button>
+                <button class="emotion-btn" data-emotion="energetic">
+                    <span class="emoji">⚡</span>
+                    <span>Energetic</span>
+                </button>
+                <button class="emotion-btn" data-emotion="cozy">
+                    <span class="emoji">🏡</span>
+                    <span>Cozy</span>
+                </button>
+                <button class="emotion-btn" data-emotion="adventurous">
+                    <span class="emoji">🌍</span>
+                    <span>Adventurous</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <div class="container">
+            <div class="products-header">
+                <h2 id="productsTitle">All Products</h2>
+                <div class="sort-options">
+                    <select id="sortSelect">
+                        <option value="default">Sort by</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="name">Name: A to Z</option>
+                    </select>
+                </div>
+            </div>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+                <button class="close-btn" id="closeCart">&times;</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be dynamically inserted here -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span class="total-amount" id="totalAmount">$0.00</span>
+                </div>
+                <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Shop Emotions. All rights reserved.</p>
+            <p>Shop with your heart ❤️</p>
+        </div>
+    </footer>
+
+    <script src="products.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
