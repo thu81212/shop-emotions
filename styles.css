@@ -169,8 +169,8 @@ header .container {
 }
 
 .emotion-btn[data-emotion="angry"] {
-    border-radius: 40% 60% 40% 60% / 60% 40% 60% 40%;
-    background: #e57373; /* Red - anger, frustration */
+    border-radius: 35% 65% 35% 65% / 65% 35% 65% 35%;
+    background: #e53935; /* Deeper red - intense anger, fury */
 }
 
 .emotion-btn[data-emotion="excited"] {
@@ -279,7 +279,7 @@ header .container {
     background: #2d2d2d;
 }
 
-/* Angry - furrowed brow, angry expression */
+/* Angry - furious expression with sharp eyebrows */
 .emotion-btn[data-emotion="angry"] .eyes {
     position: relative;
 }
@@ -287,35 +287,41 @@ header .container {
 .emotion-btn[data-emotion="angry"] .eyes::before {
     content: '';
     position: absolute;
-    top: -4px;
-    left: 0;
-    width: 12px;
-    height: 3px;
+    top: -6px;
+    left: -2px;
+    width: 14px;
+    height: 4px;
     background: #2d2d2d;
-    border-radius: 2px;
-    transform: rotate(-15deg);
+    border-radius: 1px;
+    transform: rotate(-25deg);
 }
 
 .emotion-btn[data-emotion="angry"] .eyes::after {
     content: '';
     position: absolute;
-    top: -4px;
-    right: 0;
-    width: 12px;
-    height: 3px;
+    top: -6px;
+    right: -2px;
+    width: 14px;
+    height: 4px;
     background: #2d2d2d;
-    border-radius: 2px;
-    transform: rotate(15deg);
+    border-radius: 1px;
+    transform: rotate(25deg);
 }
 
 .emotion-btn[data-emotion="angry"] .eye {
-    width: 8px;
-    height: 8px;
+    width: 7px;
+    height: 9px;
+    border-radius: 40%;
 }
 
 .emotion-btn[data-emotion="angry"] .mouth {
-    width: 18px;
-    height: 8px;
+    width: 20px;
+    height: 14px;
+    border: 3px solid #2d2d2d;
+    border-bottom: none;
+    border-top: 3px solid #2d2d2d;
+    border-radius: 22px 22px 0 0;
+    transform: translateY(2px);
 }
 
 /* Excited - star eyes, open mouth */
@@ -509,8 +515,8 @@ header .container {
 }
 
 .product-shape[data-emotion="angry"] .shape-face {
-    border-radius: 40% 60% 40% 60% / 60% 40% 60% 40%;
-    background: rgba(229, 115, 115, 0.3);
+    border-radius: 35% 65% 35% 65% / 65% 35% 65% 35%;
+    background: rgba(229, 57, 53, 0.3);
 }
 
 .product-shape[data-emotion="excited"] .shape-face {
@@ -551,7 +557,7 @@ header .container {
 
 .product-shape[data-emotion="angry"] ~ .product-info,
 .product-shape[data-emotion="angry"] {
-    --product-bg: #ffcccb;
+    --product-bg: #ffcdd2;
 }
 
 .product-shape[data-emotion="excited"] ~ .product-info,
@@ -625,7 +631,7 @@ header .container {
     background: #2d2d2d;
 }
 
-/* Angry - furrowed brow */
+/* Angry - furious with sharp V-shaped eyebrows */
 .product-shape[data-emotion="angry"] .shape-eyes {
     position: relative;
 }
@@ -633,30 +639,41 @@ header .container {
 .product-shape[data-emotion="angry"] .shape-eyes::before {
     content: '';
     position: absolute;
-    top: -5px;
-    left: 0;
-    width: 14px;
-    height: 3px;
+    top: -7px;
+    left: -3px;
+    width: 18px;
+    height: 5px;
     background: #2d2d2d;
-    border-radius: 2px;
-    transform: rotate(-15deg);
+    border-radius: 1px;
+    transform: rotate(-25deg);
 }
 
 .product-shape[data-emotion="angry"] .shape-eyes::after {
     content: '';
     position: absolute;
-    top: -5px;
-    right: 0;
-    width: 14px;
-    height: 3px;
+    top: -7px;
+    right: -3px;
+    width: 18px;
+    height: 5px;
     background: #2d2d2d;
-    border-radius: 2px;
-    transform: rotate(15deg);
+    border-radius: 1px;
+    transform: rotate(25deg);
+}
+
+.product-shape[data-emotion="angry"] .shape-eye {
+    width: 9px;
+    height: 11px;
+    border-radius: 40%;
 }
 
 .product-shape[data-emotion="angry"] .shape-mouth {
-    width: 22px;
-    height: 10px;
+    width: 26px;
+    height: 18px;
+    border: 3.5px solid #2d2d2d;
+    border-bottom: none;
+    border-top: 3.5px solid #2d2d2d;
+    border-radius: 28px 28px 0 0;
+    transform: translateY(3px);
 }
 
 /* Excited - star eyes */
@@ -868,7 +885,7 @@ header .container {
 .cart-item-image[data-emotion="sad"] { background: #e6f3ff; }
 .cart-item-image[data-emotion="calm"] { background: #e1f5fe; }
 .cart-item-image[data-emotion="anxious"] { background: #ede7f6; }
-.cart-item-image[data-emotion="angry"] { background: #ffcccb; }
+.cart-item-image[data-emotion="angry"] { background: #ffcdd2; }
 .cart-item-image[data-emotion="excited"] { background: #ffe6f0; }
 .cart-item-image[data-emotion="nostalgic"] { background: #f3e5f5; }
 .cart-item-image[data-emotion="hopeful"] { background: #d4f1d4; }
@@ -907,8 +924,8 @@ header .container {
 }
 
 .cart-item-image[data-emotion="angry"] .cart-shape {
-    border-radius: 40% 60% 40% 60% / 60% 40% 60% 40%;
-    background: rgba(229, 115, 115, 0.4);
+    border-radius: 35% 65% 35% 65% / 65% 35% 65% 35%;
+    background: rgba(229, 57, 53, 0.4);
 }
 
 .cart-item-image[data-emotion="excited"] .cart-shape {
@@ -996,25 +1013,41 @@ header .container {
 .cart-item-image[data-emotion="angry"] .cart-shape-eyes::before {
     content: '';
     position: absolute;
-    top: -3px;
-    left: 0;
-    width: 9px;
-    height: 2px;
+    top: -5px;
+    left: -2px;
+    width: 12px;
+    height: 3px;
     background: #2d2d2d;
-    border-radius: 2px;
-    transform: rotate(-15deg);
+    border-radius: 1px;
+    transform: rotate(-25deg);
 }
 
 .cart-item-image[data-emotion="angry"] .cart-shape-eyes::after {
     content: '';
     position: absolute;
-    top: -3px;
-    right: 0;
-    width: 9px;
-    height: 2px;
+    top: -5px;
+    right: -2px;
+    width: 12px;
+    height: 3px;
     background: #2d2d2d;
-    border-radius: 2px;
-    transform: rotate(15deg);
+    border-radius: 1px;
+    transform: rotate(25deg);
+}
+
+.cart-item-image[data-emotion="angry"] .cart-shape-eye {
+    width: 5px;
+    height: 7px;
+    border-radius: 40%;
+}
+
+.cart-item-image[data-emotion="angry"] .cart-shape-mouth {
+    width: 16px;
+    height: 11px;
+    border: 2.5px solid #2d2d2d;
+    border-bottom: none;
+    border-top: 2.5px solid #2d2d2d;
+    border-radius: 18px 18px 0 0;
+    transform: translateY(2px);
 }
 
 .cart-item-image[data-emotion="excited"] .cart-shape-eye {
