@@ -683,20 +683,59 @@ header .container {
     background: var(--product-bg, #f5f1e8);
 }
 
-/* Emotion-specific facial expressions for product shapes */
-/* Happy - big smile */
-.product-shape[data-emotion="happy"] .shape-mouth {
+/* Emotion-specific facial expressions for product shapes with variants */
+/* Happy - 4 expression variants */
+.product-shape[data-emotion="happy"][data-variant="1"] .shape-mouth {
     width: 28px;
     height: 14px;
 }
+.product-shape[data-emotion="happy"][data-variant="1"] .shape-eyes {
+    gap: 16px;
+}
 
-/* Sad - frown */
-.product-shape[data-emotion="sad"] .shape-eye {
+.product-shape[data-emotion="happy"][data-variant="2"] .shape-mouth {
+    width: 26px;
+    height: 12px;
+}
+.product-shape[data-emotion="happy"][data-variant="2"] .shape-eyes {
+    gap: 18px;
+}
+.product-shape[data-emotion="happy"][data-variant="2"] .shape-eye {
+    width: 11px;
+    height: 11px;
+}
+
+.product-shape[data-emotion="happy"][data-variant="3"] .shape-mouth {
+    width: 30px;
+    height: 16px;
+}
+.product-shape[data-emotion="happy"][data-variant="3"] .shape-eyes {
+    gap: 14px;
+}
+.product-shape[data-emotion="happy"][data-variant="3"] .shape-eye {
     width: 9px;
     height: 9px;
 }
 
-.product-shape[data-emotion="sad"] .shape-mouth {
+.product-shape[data-emotion="happy"][data-variant="4"] .shape-mouth {
+    width: 24px;
+    height: 13px;
+    border-radius: 0 0 20px 20px;
+}
+.product-shape[data-emotion="happy"][data-variant="4"] .shape-eyes {
+    gap: 17px;
+}
+.product-shape[data-emotion="happy"][data-variant="4"] .shape-eye {
+    width: 10px;
+    height: 11px;
+}
+
+/* Sad - 4 expression variants */
+.product-shape[data-emotion="sad"][data-variant="1"] .shape-eye {
+    width: 9px;
+    height: 9px;
+}
+.product-shape[data-emotion="sad"][data-variant="1"] .shape-mouth {
     width: 24px;
     height: 12px;
     border: 2.5px solid #2d2d2d;
@@ -705,25 +744,119 @@ header .container {
     border-radius: 24px 24px 0 0;
     transform: translateY(4px);
 }
+.product-shape[data-emotion="sad"][data-variant="1"] .shape-eyes {
+    gap: 16px;
+}
 
-/* Calm - relaxed */
-.product-shape[data-emotion="calm"] .shape-eye {
+.product-shape[data-emotion="sad"][data-variant="2"] .shape-eye {
+    width: 8px;
+    height: 10px;
+}
+.product-shape[data-emotion="sad"][data-variant="2"] .shape-mouth {
+    width: 22px;
+    height: 11px;
+    border: 2.5px solid #2d2d2d;
+    border-bottom: none;
+    border-top: 2.5px solid #2d2d2d;
+    border-radius: 22px 22px 0 0;
+    transform: translateY(5px);
+}
+.product-shape[data-emotion="sad"][data-variant="2"] .shape-eyes {
+    gap: 18px;
+}
+
+.product-shape[data-emotion="sad"][data-variant="3"] .shape-eye {
+    width: 10px;
+    height: 8px;
+}
+.product-shape[data-emotion="sad"][data-variant="3"] .shape-mouth {
+    width: 26px;
+    height: 13px;
+    border: 2.5px solid #2d2d2d;
+    border-bottom: none;
+    border-top: 2.5px solid #2d2d2d;
+    border-radius: 26px 26px 0 0;
+    transform: translateY(3px);
+}
+.product-shape[data-emotion="sad"][data-variant="3"] .shape-eyes {
+    gap: 14px;
+}
+
+.product-shape[data-emotion="sad"][data-variant="4"] .shape-eye {
+    width: 8.5px;
+    height: 8.5px;
+}
+.product-shape[data-emotion="sad"][data-variant="4"] .shape-mouth {
+    width: 20px;
+    height: 10px;
+    border: 2.5px solid #2d2d2d;
+    border-bottom: none;
+    border-top: 2.5px solid #2d2d2d;
+    border-radius: 20px 20px 0 0;
+    transform: translateY(4.5px);
+}
+.product-shape[data-emotion="sad"][data-variant="4"] .shape-eyes {
+    gap: 17px;
+}
+
+/* Calm - 4 expression variants */
+.product-shape[data-emotion="calm"][data-variant="1"] .shape-eye {
     height: 5px;
     border-radius: 2px;
 }
-
-.product-shape[data-emotion="calm"] .shape-mouth {
+.product-shape[data-emotion="calm"][data-variant="1"] .shape-mouth {
     width: 22px;
     height: 8px;
 }
+.product-shape[data-emotion="calm"][data-variant="1"] .shape-eyes {
+    gap: 16px;
+}
 
-/* Anxious - worried */
-.product-shape[data-emotion="anxious"] .shape-eye {
+.product-shape[data-emotion="calm"][data-variant="2"] .shape-eye {
+    height: 4px;
+    width: 11px;
+    border-radius: 2px;
+}
+.product-shape[data-emotion="calm"][data-variant="2"] .shape-mouth {
+    width: 20px;
+    height: 7px;
+}
+.product-shape[data-emotion="calm"][data-variant="2"] .shape-eyes {
+    gap: 18px;
+}
+
+.product-shape[data-emotion="calm"][data-variant="3"] .shape-eye {
+    height: 6px;
+    width: 9px;
+    border-radius: 2px;
+}
+.product-shape[data-emotion="calm"][data-variant="3"] .shape-mouth {
+    width: 24px;
+    height: 9px;
+}
+.product-shape[data-emotion="calm"][data-variant="3"] .shape-eyes {
+    gap: 14px;
+}
+
+.product-shape[data-emotion="calm"][data-variant="4"] .shape-eye {
+    height: 4.5px;
+    width: 10px;
+    border-radius: 2px;
+}
+.product-shape[data-emotion="calm"][data-variant="4"] .shape-mouth {
+    width: 21px;
+    height: 7.5px;
+}
+.product-shape[data-emotion="calm"][data-variant="4"] .shape-eyes {
+    gap: 17px;
+}
+
+/* Anxious - 4 expression variants */
+.product-shape[data-emotion="anxious"][data-variant="1"] .shape-eye {
     width: 8px;
     height: 11px;
 }
-
-.product-shape[data-emotion="anxious"] .shape-mouth {
+.product-shape[data-emotion="anxious"][data-variant="1"] .shape-mouth {
     width: 20px;
     height: 5px;
     border-radius: 0;
@@ -734,13 +867,73 @@ header .container {
     border-right: none;
     background: #2d2d2d;
 }
+.product-shape[data-emotion="anxious"][data-variant="1"] .shape-eyes {
+    gap: 16px;
+}
 
-/* Angry - furious with sharp V-shaped eyebrows */
+.product-shape[data-emotion="anxious"][data-variant="2"] .shape-eye {
+    width: 7px;
+    height: 12px;
+}
+.product-shape[data-emotion="anxious"][data-variant="2"] .shape-mouth {
+    width: 18px;
+    height: 4px;
+    border-radius: 0;
+    border: 1.5px solid #2d2d2d;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    background: #2d2d2d;
+}
+.product-shape[data-emotion="anxious"][data-variant="2"] .shape-eyes {
+    gap: 18px;
+}
+
+.product-shape[data-emotion="anxious"][data-variant="3"] .shape-eye {
+    width: 9px;
+    height: 10px;
+}
+.product-shape[data-emotion="anxious"][data-variant="3"] .shape-mouth {
+    width: 22px;
+    height: 6px;
+    border-radius: 0;
+    border: 2px solid #2d2d2d;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    background: #2d2d2d;
+}
+.product-shape[data-emotion="anxious"][data-variant="3"] .shape-eyes {
+    gap: 14px;
+}
+
+.product-shape[data-emotion="anxious"][data-variant="4"] .shape-eye {
+    width: 7.5px;
+    height: 11.5px;
+}
+.product-shape[data-emotion="anxious"][data-variant="4"] .shape-mouth {
+    width: 19px;
+    height: 4.5px;
+    border-radius: 0;
+    border: 2px solid #2d2d2d;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    background: #2d2d2d;
+}
+.product-shape[data-emotion="anxious"][data-variant="4"] .shape-eyes {
+    gap: 17px;
+}
+
+/* Angry - 4 expression variants with eyebrows */
 .product-shape[data-emotion="angry"] .shape-eyes {
     position: relative;
 }
 
-.product-shape[data-emotion="angry"] .shape-eyes::before {
+.product-shape[data-emotion="angry"][data-variant="1"] .shape-eyes::before {
     content: '';
     position: absolute;
     top: -7px;
@@ -751,8 +944,7 @@ header .container {
     border-radius: 1px;
     transform: rotate(-25deg);
 }
-
-.product-shape[data-emotion="angry"] .shape-eyes::after {
+.product-shape[data-emotion="angry"][data-variant="1"] .shape-eyes::after {
     content: '';
     position: absolute;
     top: -7px;
@@ -763,14 +955,12 @@ header .container {
     border-radius: 1px;
     transform: rotate(25deg);
 }
-
-.product-shape[data-emotion="angry"] .shape-eye {
+.product-shape[data-emotion="angry"][data-variant="1"] .shape-eye {
     width: 9px;
     height: 11px;
     border-radius: 40%;
 }
-
-.product-shape[data-emotion="angry"] .shape-mouth {
+.product-shape[data-emotion="angry"][data-variant="1"] .shape-mouth {
     width: 26px;
     height: 18px;
     border: 3.5px solid #2d2d2d;
@@ -779,45 +969,287 @@ header .container {
     border-radius: 28px 28px 0 0;
     transform: translateY(3px);
 }
+.product-shape[data-emotion="angry"][data-variant="1"] .shape-eyes {
+    gap: 16px;
+}
 
-/* Excited - star eyes */
-.product-shape[data-emotion="excited"] .shape-eye {
+.product-shape[data-emotion="angry"][data-variant="2"] .shape-eyes::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -2px;
+    width: 16px;
+    height: 4px;
+    background: #2d2d2d;
+    border-radius: 1px;
+    transform: rotate(-28deg);
+}
+.product-shape[data-emotion="angry"][data-variant="2"] .shape-eyes::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: -2px;
+    width: 16px;
+    height: 4px;
+    background: #2d2d2d;
+    border-radius: 1px;
+    transform: rotate(28deg);
+}
+.product-shape[data-emotion="angry"][data-variant="2"] .shape-eye {
+    width: 8px;
+    height: 12px;
+    border-radius: 40%;
+}
+.product-shape[data-emotion="angry"][data-variant="2"] .shape-mouth {
+    width: 24px;
+    height: 16px;
+    border: 3px solid #2d2d2d;
+    border-bottom: none;
+    border-top: 3px solid #2d2d2d;
+    border-radius: 26px 26px 0 0;
+    transform: translateY(4px);
+}
+.product-shape[data-emotion="angry"][data-variant="2"] .shape-eyes {
+    gap: 18px;
+}
+
+.product-shape[data-emotion="angry"][data-variant="3"] .shape-eyes::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: -4px;
+    width: 20px;
+    height: 5.5px;
+    background: #2d2d2d;
+    border-radius: 1px;
+    transform: rotate(-22deg);
+}
+.product-shape[data-emotion="angry"][data-variant="3"] .shape-eyes::after {
+    content: '';
+    position: absolute;
+    top: -6px;
+    right: -4px;
+    width: 20px;
+    height: 5.5px;
+    background: #2d2d2d;
+    border-radius: 1px;
+    transform: rotate(22deg);
+}
+.product-shape[data-emotion="angry"][data-variant="3"] .shape-eye {
+    width: 10px;
+    height: 10px;
+    border-radius: 40%;
+}
+.product-shape[data-emotion="angry"][data-variant="3"] .shape-mouth {
+    width: 28px;
+    height: 20px;
+    border: 4px solid #2d2d2d;
+    border-bottom: none;
+    border-top: 4px solid #2d2d2d;
+    border-radius: 30px 30px 0 0;
+    transform: translateY(2px);
+}
+.product-shape[data-emotion="angry"][data-variant="3"] .shape-eyes {
+    gap: 14px;
+}
+
+.product-shape[data-emotion="angry"][data-variant="4"] .shape-eyes::before {
+    content: '';
+    position: absolute;
+    top: -7.5px;
+    left: -3px;
+    width: 17px;
+    height: 4.5px;
+    background: #2d2d2d;
+    border-radius: 1px;
+    transform: rotate(-26deg);
+}
+.product-shape[data-emotion="angry"][data-variant="4"] .shape-eyes::after {
+    content: '';
+    position: absolute;
+    top: -7.5px;
+    right: -3px;
+    width: 17px;
+    height: 4.5px;
+    background: #2d2d2d;
+    border-radius: 1px;
+    transform: rotate(26deg);
+}
+.product-shape[data-emotion="angry"][data-variant="4"] .shape-eye {
+    width: 8.5px;
+    height: 11.5px;
+    border-radius: 40%;
+}
+.product-shape[data-emotion="angry"][data-variant="4"] .shape-mouth {
+    width: 25px;
+    height: 17px;
+    border: 3.5px solid #2d2d2d;
+    border-bottom: none;
+    border-top: 3.5px solid #2d2d2d;
+    border-radius: 27px 27px 0 0;
+    transform: translateY(3.5px);
+}
+.product-shape[data-emotion="angry"][data-variant="4"] .shape-eyes {
+    gap: 17px;
+}
+
+/* Excited - 4 expression variants with star eyes */
+.product-shape[data-emotion="excited"][data-variant="1"] .shape-eye {
     width: 12px;
     height: 12px;
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
 }
-
-.product-shape[data-emotion="excited"] .shape-mouth {
+.product-shape[data-emotion="excited"][data-variant="1"] .shape-mouth {
     width: 26px;
     height: 18px;
     border-radius: 50%;
     border-top: 2.5px solid #2d2d2d;
 }
+.product-shape[data-emotion="excited"][data-variant="1"] .shape-eyes {
+    gap: 16px;
+}
 
-/* Nostalgic - wistful */
-.product-shape[data-emotion="nostalgic"] .shape-eyes {
+.product-shape[data-emotion="excited"][data-variant="2"] .shape-eye {
+    width: 13px;
+    height: 13px;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+.product-shape[data-emotion="excited"][data-variant="2"] .shape-mouth {
+    width: 24px;
+    height: 16px;
+    border-radius: 50%;
+    border-top: 2.5px solid #2d2d2d;
+}
+.product-shape[data-emotion="excited"][data-variant="2"] .shape-eyes {
     gap: 18px;
 }
 
-.product-shape[data-emotion="nostalgic"] .shape-eye {
+.product-shape[data-emotion="excited"][data-variant="3"] .shape-eye {
+    width: 11px;
+    height: 11px;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+.product-shape[data-emotion="excited"][data-variant="3"] .shape-mouth {
+    width: 28px;
+    height: 20px;
+    border-radius: 50%;
+    border-top: 3px solid #2d2d2d;
+}
+.product-shape[data-emotion="excited"][data-variant="3"] .shape-eyes {
+    gap: 14px;
+}
+
+.product-shape[data-emotion="excited"][data-variant="4"] .shape-eye {
+    width: 12.5px;
+    height: 12.5px;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+.product-shape[data-emotion="excited"][data-variant="4"] .shape-mouth {
+    width: 25px;
+    height: 17px;
+    border-radius: 50%;
+    border-top: 2.5px solid #2d2d2d;
+}
+.product-shape[data-emotion="excited"][data-variant="4"] .shape-eyes {
+    gap: 17px;
+}
+
+/* Nostalgic - 4 expression variants */
+.product-shape[data-emotion="nostalgic"][data-variant="1"] .shape-eyes {
+    gap: 18px;
+}
+.product-shape[data-emotion="nostalgic"][data-variant="1"] .shape-eye {
     width: 9px;
     height: 9px;
 }
-
-.product-shape[data-emotion="nostalgic"] .shape-mouth {
+.product-shape[data-emotion="nostalgic"][data-variant="1"] .shape-mouth {
     width: 22px;
     height: 9px;
 }
 
-/* Hopeful - bright eyes, gentle smile */
-.product-shape[data-emotion="hopeful"] .shape-eye {
+.product-shape[data-emotion="nostalgic"][data-variant="2"] .shape-eyes {
+    gap: 20px;
+}
+.product-shape[data-emotion="nostalgic"][data-variant="2"] .shape-eye {
+    width: 8px;
+    height: 8px;
+}
+.product-shape[data-emotion="nostalgic"][data-variant="2"] .shape-mouth {
+    width: 20px;
+    height: 8px;
+}
+
+.product-shape[data-emotion="nostalgic"][data-variant="3"] .shape-eyes {
+    gap: 16px;
+}
+.product-shape[data-emotion="nostalgic"][data-variant="3"] .shape-eye {
+    width: 10px;
+    height: 10px;
+}
+.product-shape[data-emotion="nostalgic"][data-variant="3"] .shape-mouth {
+    width: 24px;
+    height: 10px;
+}
+
+.product-shape[data-emotion="nostalgic"][data-variant="4"] .shape-eyes {
+    gap: 19px;
+}
+.product-shape[data-emotion="nostalgic"][data-variant="4"] .shape-eye {
+    width: 8.5px;
+    height: 9px;
+}
+.product-shape[data-emotion="nostalgic"][data-variant="4"] .shape-mouth {
+    width: 21px;
+    height: 8.5px;
+}
+
+/* Hopeful - 4 expression variants */
+.product-shape[data-emotion="hopeful"][data-variant="1"] .shape-eye {
     width: 10px;
     height: 11px;
 }
-
-.product-shape[data-emotion="hopeful"] .shape-mouth {
+.product-shape[data-emotion="hopeful"][data-variant="1"] .shape-mouth {
     width: 26px;
     height: 12px;
+}
+.product-shape[data-emotion="hopeful"][data-variant="1"] .shape-eyes {
+    gap: 16px;
+}
+
+.product-shape[data-emotion="hopeful"][data-variant="2"] .shape-eye {
+    width: 11px;
+    height: 10px;
+}
+.product-shape[data-emotion="hopeful"][data-variant="2"] .shape-mouth {
+    width: 24px;
+    height: 11px;
+}
+.product-shape[data-emotion="hopeful"][data-variant="2"] .shape-eyes {
+    gap: 18px;
+}
+
+.product-shape[data-emotion="hopeful"][data-variant="3"] .shape-eye {
+    width: 9px;
+    height: 12px;
+}
+.product-shape[data-emotion="hopeful"][data-variant="3"] .shape-mouth {
+    width: 28px;
+    height: 13px;
+}
+.product-shape[data-emotion="hopeful"][data-variant="3"] .shape-eyes {
+    gap: 14px;
+}
+
+.product-shape[data-emotion="hopeful"][data-variant="4"] .shape-eye {
+    width: 10.5px;
+    height: 11.5px;
+}
+.product-shape[data-emotion="hopeful"][data-variant="4"] .shape-mouth {
+    width: 25px;
+    height: 11.5px;
+}
+.product-shape[data-emotion="hopeful"][data-variant="4"] .shape-eyes {
+    gap: 17px;
 }
 
 .product-info {
