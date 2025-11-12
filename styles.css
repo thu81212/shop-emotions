@@ -487,40 +487,217 @@ header .container {
     border-radius: 0 0 24px 24px;
 }
 
-/* Varied organic shapes for products */
-.product-card:nth-child(6n+1) .shape-face {
+/* Emotion-specific shapes for products */
+.product-shape[data-emotion="happy"] .shape-face {
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    background: rgba(255, 235, 59, 0.3);
 }
 
-.product-card:nth-child(6n+2) .shape-face {
+.product-shape[data-emotion="sad"] .shape-face {
+    border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
+    background: rgba(92, 138, 168, 0.3);
+}
+
+.product-shape[data-emotion="calm"] .shape-face {
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    background: rgba(129, 212, 250, 0.3);
 }
 
-.product-card:nth-child(6n+3) .shape-face {
+.product-shape[data-emotion="anxious"] .shape-face {
+    border-radius: 45% 55% 50% 50% / 55% 45% 55% 45%;
+    background: rgba(149, 117, 205, 0.3);
+}
+
+.product-shape[data-emotion="angry"] .shape-face {
+    border-radius: 40% 60% 40% 60% / 60% 40% 60% 40%;
+    background: rgba(229, 115, 115, 0.3);
+}
+
+.product-shape[data-emotion="excited"] .shape-face {
     border-radius: 50% 50% 20% 80% / 80% 20% 80% 20%;
+    background: rgba(255, 110, 199, 0.3);
 }
 
-.product-card:nth-child(6n+4) .shape-face {
-    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+.product-shape[data-emotion="nostalgic"] .shape-face {
+    border-radius: 55% 45% 45% 55% / 45% 55% 45% 55%;
+    background: rgba(179, 157, 219, 0.3);
 }
 
-.product-card:nth-child(6n+5) .shape-face {
-    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+.product-shape[data-emotion="hopeful"] .shape-face {
+    border-radius: 50% 50% 50% 50% / 60% 40% 60% 40%;
+    background: rgba(129, 199, 132, 0.3);
 }
 
-.product-card:nth-child(6n+6) .shape-face {
-    border-radius: 70% 30% 50% 50% / 30% 60% 40% 70%;
+/* Emotion-specific backgrounds for product cards */
+.product-shape[data-emotion="happy"] ~ .product-info,
+.product-shape[data-emotion="happy"] {
+    --product-bg: #fff9e6;
 }
 
-/* Varied backgrounds for product cards */
-.product-card:nth-child(8n+1) .product-image { background: #ffcccb; }
-.product-card:nth-child(8n+2) .product-image { background: #fff9e6; }
-.product-card:nth-child(8n+3) .product-image { background: #e6f3ff; }
-.product-card:nth-child(8n+4) .product-image { background: #ffe6f0; }
-.product-card:nth-child(8n+5) .product-image { background: #d4f1d4; }
-.product-card:nth-child(8n+6) .product-image { background: #ffd4a3; }
-.product-card:nth-child(8n+7) .product-image { background: #e6d5ff; }
-.product-card:nth-child(8n+8) .product-image { background: #d4e8ff; }
+.product-shape[data-emotion="sad"] ~ .product-info,
+.product-shape[data-emotion="sad"] {
+    --product-bg: #e6f3ff;
+}
+
+.product-shape[data-emotion="calm"] ~ .product-info,
+.product-shape[data-emotion="calm"] {
+    --product-bg: #e1f5fe;
+}
+
+.product-shape[data-emotion="anxious"] ~ .product-info,
+.product-shape[data-emotion="anxious"] {
+    --product-bg: #ede7f6;
+}
+
+.product-shape[data-emotion="angry"] ~ .product-info,
+.product-shape[data-emotion="angry"] {
+    --product-bg: #ffcccb;
+}
+
+.product-shape[data-emotion="excited"] ~ .product-info,
+.product-shape[data-emotion="excited"] {
+    --product-bg: #ffe6f0;
+}
+
+.product-shape[data-emotion="nostalgic"] ~ .product-info,
+.product-shape[data-emotion="nostalgic"] {
+    --product-bg: #f3e5f5;
+}
+
+.product-shape[data-emotion="hopeful"] ~ .product-info,
+.product-shape[data-emotion="hopeful"] {
+    --product-bg: #d4f1d4;
+}
+
+.product-card .product-image {
+    background: var(--product-bg, #f5f1e8);
+}
+
+/* Emotion-specific facial expressions for product shapes */
+/* Happy - big smile */
+.product-shape[data-emotion="happy"] .shape-mouth {
+    width: 28px;
+    height: 14px;
+}
+
+/* Sad - frown */
+.product-shape[data-emotion="sad"] .shape-eye {
+    width: 9px;
+    height: 9px;
+}
+
+.product-shape[data-emotion="sad"] .shape-mouth {
+    width: 24px;
+    height: 12px;
+    border: 2.5px solid #2d2d2d;
+    border-bottom: none;
+    border-top: 2.5px solid #2d2d2d;
+    border-radius: 24px 24px 0 0;
+    transform: translateY(4px);
+}
+
+/* Calm - relaxed */
+.product-shape[data-emotion="calm"] .shape-eye {
+    height: 5px;
+    border-radius: 2px;
+}
+
+.product-shape[data-emotion="calm"] .shape-mouth {
+    width: 22px;
+    height: 8px;
+}
+
+/* Anxious - worried */
+.product-shape[data-emotion="anxious"] .shape-eye {
+    width: 8px;
+    height: 11px;
+}
+
+.product-shape[data-emotion="anxious"] .shape-mouth {
+    width: 20px;
+    height: 5px;
+    border-radius: 0;
+    border: 2px solid #2d2d2d;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    background: #2d2d2d;
+}
+
+/* Angry - furrowed brow */
+.product-shape[data-emotion="angry"] .shape-eyes {
+    position: relative;
+}
+
+.product-shape[data-emotion="angry"] .shape-eyes::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 14px;
+    height: 3px;
+    background: #2d2d2d;
+    border-radius: 2px;
+    transform: rotate(-15deg);
+}
+
+.product-shape[data-emotion="angry"] .shape-eyes::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: 0;
+    width: 14px;
+    height: 3px;
+    background: #2d2d2d;
+    border-radius: 2px;
+    transform: rotate(15deg);
+}
+
+.product-shape[data-emotion="angry"] .shape-mouth {
+    width: 22px;
+    height: 10px;
+}
+
+/* Excited - star eyes */
+.product-shape[data-emotion="excited"] .shape-eye {
+    width: 12px;
+    height: 12px;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.product-shape[data-emotion="excited"] .shape-mouth {
+    width: 26px;
+    height: 18px;
+    border-radius: 50%;
+    border-top: 2.5px solid #2d2d2d;
+}
+
+/* Nostalgic - wistful */
+.product-shape[data-emotion="nostalgic"] .shape-eyes {
+    gap: 18px;
+}
+
+.product-shape[data-emotion="nostalgic"] .shape-eye {
+    width: 9px;
+    height: 9px;
+}
+
+.product-shape[data-emotion="nostalgic"] .shape-mouth {
+    width: 22px;
+    height: 9px;
+}
+
+/* Hopeful - bright eyes, gentle smile */
+.product-shape[data-emotion="hopeful"] .shape-eye {
+    width: 10px;
+    height: 11px;
+}
+
+.product-shape[data-emotion="hopeful"] .shape-mouth {
+    width: 26px;
+    height: 12px;
+}
 
 .product-info {
     padding: 1.5rem;
@@ -686,6 +863,16 @@ header .container {
     flex-shrink: 0;
 }
 
+/* Emotion-specific backgrounds for cart items */
+.cart-item-image[data-emotion="happy"] { background: #fff9e6; }
+.cart-item-image[data-emotion="sad"] { background: #e6f3ff; }
+.cart-item-image[data-emotion="calm"] { background: #e1f5fe; }
+.cart-item-image[data-emotion="anxious"] { background: #ede7f6; }
+.cart-item-image[data-emotion="angry"] { background: #ffcccb; }
+.cart-item-image[data-emotion="excited"] { background: #ffe6f0; }
+.cart-item-image[data-emotion="nostalgic"] { background: #f3e5f5; }
+.cart-item-image[data-emotion="hopeful"] { background: #d4f1d4; }
+
 .cart-shape {
     width: 50px;
     height: 50px;
@@ -696,6 +883,47 @@ header .container {
     align-items: center;
     justify-content: center;
     gap: 6px;
+}
+
+/* Emotion-specific shapes for cart items */
+.cart-item-image[data-emotion="happy"] .cart-shape {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    background: rgba(255, 235, 59, 0.4);
+}
+
+.cart-item-image[data-emotion="sad"] .cart-shape {
+    border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
+    background: rgba(92, 138, 168, 0.4);
+}
+
+.cart-item-image[data-emotion="calm"] .cart-shape {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    background: rgba(129, 212, 250, 0.4);
+}
+
+.cart-item-image[data-emotion="anxious"] .cart-shape {
+    border-radius: 45% 55% 50% 50% / 55% 45% 55% 45%;
+    background: rgba(149, 117, 205, 0.4);
+}
+
+.cart-item-image[data-emotion="angry"] .cart-shape {
+    border-radius: 40% 60% 40% 60% / 60% 40% 60% 40%;
+    background: rgba(229, 115, 115, 0.4);
+}
+
+.cart-item-image[data-emotion="excited"] .cart-shape {
+    border-radius: 50% 50% 20% 80% / 80% 20% 80% 20%;
+    background: rgba(255, 110, 199, 0.4);
+}
+
+.cart-item-image[data-emotion="nostalgic"] .cart-shape {
+    border-radius: 55% 45% 45% 55% / 45% 55% 45% 55%;
+    background: rgba(179, 157, 219, 0.4);
+}
+
+.cart-item-image[data-emotion="hopeful"] .cart-shape {
+    border-radius: 50% 50% 50% 50% / 60% 40% 60% 40%;
+    background: rgba(129, 199, 132, 0.4);
 }
 
 .cart-shape-eyes {
@@ -716,6 +944,114 @@ header .container {
     border: 2px solid #2d2d2d;
     border-top: none;
     border-radius: 0 0 14px 14px;
+}
+
+/* Emotion-specific facial expressions for cart shapes */
+.cart-item-image[data-emotion="happy"] .cart-shape-mouth {
+    width: 18px;
+    height: 9px;
+}
+
+.cart-item-image[data-emotion="sad"] .cart-shape-mouth {
+    width: 16px;
+    height: 8px;
+    border: 2px solid #2d2d2d;
+    border-bottom: none;
+    border-top: 2px solid #2d2d2d;
+    border-radius: 16px 16px 0 0;
+    transform: translateY(3px);
+}
+
+.cart-item-image[data-emotion="calm"] .cart-shape-eye {
+    height: 3px;
+    border-radius: 2px;
+}
+
+.cart-item-image[data-emotion="calm"] .cart-shape-mouth {
+    width: 14px;
+    height: 5px;
+}
+
+.cart-item-image[data-emotion="anxious"] .cart-shape-eye {
+    width: 5px;
+    height: 7px;
+}
+
+.cart-item-image[data-emotion="anxious"] .cart-shape-mouth {
+    width: 12px;
+    height: 3px;
+    border: 1.5px solid #2d2d2d;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    background: #2d2d2d;
+    border-radius: 0;
+}
+
+.cart-item-image[data-emotion="angry"] .cart-shape-eyes {
+    position: relative;
+}
+
+.cart-item-image[data-emotion="angry"] .cart-shape-eyes::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 9px;
+    height: 2px;
+    background: #2d2d2d;
+    border-radius: 2px;
+    transform: rotate(-15deg);
+}
+
+.cart-item-image[data-emotion="angry"] .cart-shape-eyes::after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    right: 0;
+    width: 9px;
+    height: 2px;
+    background: #2d2d2d;
+    border-radius: 2px;
+    transform: rotate(15deg);
+}
+
+.cart-item-image[data-emotion="excited"] .cart-shape-eye {
+    width: 8px;
+    height: 8px;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.cart-item-image[data-emotion="excited"] .cart-shape-mouth {
+    width: 16px;
+    height: 11px;
+    border-radius: 50%;
+    border-top: 2px solid #2d2d2d;
+}
+
+.cart-item-image[data-emotion="nostalgic"] .cart-shape-eyes {
+    gap: 12px;
+}
+
+.cart-item-image[data-emotion="nostalgic"] .cart-shape-eye {
+    width: 5px;
+    height: 5px;
+}
+
+.cart-item-image[data-emotion="nostalgic"] .cart-shape-mouth {
+    width: 14px;
+    height: 6px;
+}
+
+.cart-item-image[data-emotion="hopeful"] .cart-shape-eye {
+    width: 6px;
+    height: 7px;
+}
+
+.cart-item-image[data-emotion="hopeful"] .cart-shape-mouth {
+    width: 16px;
+    height: 8px;
 }
 
 .cart-item-details {

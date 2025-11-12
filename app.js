@@ -81,9 +81,10 @@ function createProductCard(product) {
         `<span class="emotion-tag">${emotion}</span>`
     ).join('');
 
-    // Create a shape representation instead of emoji
+    // Create a shape representation based on the product's primary emotion
+    const primaryEmotion = product.emotions[0];
     const shapeHTML = `
-        <div class="product-shape">
+        <div class="product-shape" data-emotion="${primaryEmotion}">
             <div class="shape-face">
                 <div class="shape-eyes">
                     <div class="shape-eye"></div>
@@ -194,7 +195,7 @@ function updateCartUI() {
     // Display cart items
     cartItems.innerHTML = cart.map(item => `
         <div class="cart-item">
-            <div class="cart-item-image">
+            <div class="cart-item-image" data-emotion="${item.emotions[0]}">
                 <div class="cart-shape">
                     <div class="cart-shape-eyes">
                         <div class="cart-shape-eye"></div>
