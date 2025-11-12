@@ -269,15 +269,6 @@ checkoutBtn.addEventListener('click', () => {
     document.body.style.overflow = 'auto';
 });
 
-// Journal button functionality
-const journalBtn = document.getElementById('journalBtn');
-if (journalBtn) {
-    journalBtn.addEventListener('click', () => {
-        // TODO: Open journal modal with saved receipts
-        alert('Journal feature coming soon! Your emotional receipts will be saved here for reflection.');
-    });
-}
-
 // Local Storage
 function saveCart() {
     localStorage.setItem('shopEmotionsCart', JSON.stringify(cart));
