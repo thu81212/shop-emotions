@@ -81,8 +81,21 @@ function createProductCard(product) {
         `<span class="emotion-tag">${emotion}</span>`
     ).join('');
 
+    // Create a shape representation instead of emoji
+    const shapeHTML = `
+        <div class="product-shape">
+            <div class="shape-face">
+                <div class="shape-eyes">
+                    <div class="shape-eye"></div>
+                    <div class="shape-eye"></div>
+                </div>
+                <div class="shape-mouth"></div>
+            </div>
+        </div>
+    `;
+
     card.innerHTML = `
-        <div class="product-image">${product.emoji}</div>
+        <div class="product-image">${shapeHTML}</div>
         <div class="product-info">
             <div class="product-emotions">${emotionTags}</div>
             <h3 class="product-name">${product.name}</h3>
@@ -181,7 +194,15 @@ function updateCartUI() {
     // Display cart items
     cartItems.innerHTML = cart.map(item => `
         <div class="cart-item">
-            <div class="cart-item-image">${item.emoji}</div>
+            <div class="cart-item-image">
+                <div class="cart-shape">
+                    <div class="cart-shape-eyes">
+                        <div class="cart-shape-eye"></div>
+                        <div class="cart-shape-eye"></div>
+                    </div>
+                    <div class="cart-shape-mouth"></div>
+                </div>
+            </div>
             <div class="cart-item-details">
                 <div class="cart-item-name">${item.name}</div>
                 <div class="cart-item-price">$${item.price.toFixed(2)} each</div>

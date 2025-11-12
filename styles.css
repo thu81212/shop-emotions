@@ -183,9 +183,126 @@ header .container {
     background: #4caf50;
 }
 
-.emotion-btn .emoji {
-    font-size: 2.5rem;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+/* Face elements */
+.emotion-btn .face {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.emotion-btn .eyes {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.emotion-btn .eye {
+    width: 8px;
+    height: 8px;
+    background: #2d2d2d;
+    border-radius: 50%;
+}
+
+.emotion-btn .mouth {
+    width: 20px;
+    height: 10px;
+    border: 2px solid #2d2d2d;
+    border-top: none;
+    border-radius: 0 0 20px 20px;
+}
+
+/* Different expressions for each emotion */
+/* Happy - big smile */
+.emotion-btn[data-emotion="happy"] .mouth {
+    width: 24px;
+    height: 12px;
+}
+
+/* Calm - relaxed smile */
+.emotion-btn[data-emotion="calm"] .eye {
+    height: 4px;
+    border-radius: 2px;
+}
+
+.emotion-btn[data-emotion="calm"] .mouth {
+    width: 18px;
+    height: 6px;
+}
+
+/* Excited - star eyes */
+.emotion-btn[data-emotion="excited"] .eye {
+    width: 10px;
+    height: 10px;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.emotion-btn[data-emotion="excited"] .mouth {
+    width: 22px;
+    height: 16px;
+    border-radius: 50%;
+    border-top: 2px solid #2d2d2d;
+}
+
+/* Romantic - heart eyes */
+.emotion-btn[data-emotion="romantic"] .eye {
+    width: 9px;
+    height: 9px;
+    background: #ff6b9d;
+    transform: rotate(45deg);
+    border-radius: 50% 0 50% 50%;
+}
+
+.emotion-btn[data-emotion="romantic"] .mouth {
+    width: 20px;
+    height: 10px;
+}
+
+/* Energetic - wide open eyes */
+.emotion-btn[data-emotion="energetic"] .eye {
+    width: 10px;
+    height: 10px;
+}
+
+.emotion-btn[data-emotion="energetic"] .mouth {
+    width: 20px;
+    height: 14px;
+}
+
+/* Cozy - sleepy eyes */
+.emotion-btn[data-emotion="cozy"] .eye {
+    height: 3px;
+    border-radius: 2px;
+}
+
+.emotion-btn[data-emotion="cozy"] .mouth {
+    width: 16px;
+    height: 8px;
+}
+
+/* Adventurous - determined look */
+.emotion-btn[data-emotion="adventurous"] .eyes {
+    gap: 14px;
+}
+
+.emotion-btn[data-emotion="adventurous"] .eye {
+    width: 9px;
+    height: 9px;
+}
+
+.emotion-btn[data-emotion="adventurous"] .mouth {
+    width: 22px;
+    height: 8px;
+    border-radius: 0 0 16px 16px;
+}
+
+/* All - simple happy face */
+.emotion-btn[data-emotion="all"] .mouth {
+    width: 20px;
+    height: 10px;
 }
 
 .emotion-btn:hover {
@@ -270,9 +387,76 @@ header .container {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 5rem;
     padding: 2rem;
     position: relative;
+}
+
+/* Product Shape Styles */
+.product-shape {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.shape-face {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+}
+
+.shape-eyes {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.shape-eye {
+    width: 10px;
+    height: 10px;
+    background: #2d2d2d;
+    border-radius: 50%;
+}
+
+.shape-mouth {
+    width: 24px;
+    height: 12px;
+    border: 2.5px solid #2d2d2d;
+    border-top: none;
+    border-radius: 0 0 24px 24px;
+}
+
+/* Varied organic shapes for products */
+.product-card:nth-child(6n+1) .shape-face {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+
+.product-card:nth-child(6n+2) .shape-face {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+.product-card:nth-child(6n+3) .shape-face {
+    border-radius: 50% 50% 20% 80% / 80% 20% 80% 20%;
+}
+
+.product-card:nth-child(6n+4) .shape-face {
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+
+.product-card:nth-child(6n+5) .shape-face {
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+}
+
+.product-card:nth-child(6n+6) .shape-face {
+    border-radius: 70% 30% 50% 50% / 30% 60% 40% 70%;
 }
 
 /* Varied backgrounds for product cards */
@@ -446,8 +630,39 @@ header .container {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
     flex-shrink: 0;
+}
+
+.cart-shape {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50% 50% 20% 80% / 80% 20% 80% 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.cart-shape-eyes {
+    display: flex;
+    gap: 10px;
+}
+
+.cart-shape-eye {
+    width: 6px;
+    height: 6px;
+    background: #2d2d2d;
+    border-radius: 50%;
+}
+
+.cart-shape-mouth {
+    width: 14px;
+    height: 7px;
+    border: 2px solid #2d2d2d;
+    border-top: none;
+    border-radius: 0 0 14px 14px;
 }
 
 .cart-item-details {
@@ -602,8 +817,9 @@ footer p {
         height: 100px;
     }
 
-    .emotion-btn .emoji {
-        font-size: 2rem;
+    .emotion-btn .face {
+        width: 50px;
+        height: 50px;
     }
 
     .products-grid {
@@ -632,8 +848,9 @@ footer p {
         font-size: 0.75rem;
     }
 
-    .emotion-btn .emoji {
-        font-size: 1.75rem;
+    .emotion-btn .face {
+        width: 45px;
+        height: 45px;
     }
 
     .cart-btn {
