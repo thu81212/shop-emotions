@@ -255,10 +255,11 @@ cartModal.addEventListener('click', (e) => {
 checkoutBtn.addEventListener('click', () => {
     if (cart.length === 0) return;
 
-    const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-    const itemCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+    // Create a copy of cart items before clearing
+    const purchasedItems = [...cart];
 
-    alert(`🎉 Checkout Complete!\n\nTotal Items: ${itemCount}\nTotal Amount: $${total.toFixed(2)}\n\nThank you for shopping with your emotions! ❤️`);
+    // Show receipt with emotional insights
+    showReceipt(purchasedItems);
 
     // Clear cart
     cart = [];

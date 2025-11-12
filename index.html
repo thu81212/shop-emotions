@@ -186,6 +186,55 @@
         </div>
     </div>
 
+    <!-- Receipt Modal -->
+    <div class="receipt-modal" id="receiptModal">
+        <div class="receipt-content" id="receiptContent">
+            <div class="receipt-header">
+                <h2>💝 Your Emotional Receipt</h2>
+                <button class="close-btn" id="closeReceipt">&times;</button>
+            </div>
+
+            <div class="receipt-body">
+                <div class="receipt-date" id="receiptDate"></div>
+
+                <div class="receipt-divider">✨ ✨ ✨</div>
+
+                <div class="receipt-items" id="receiptItems">
+                    <!-- Receipt items will be inserted here -->
+                </div>
+
+                <div class="receipt-total">
+                    <span>Total:</span>
+                    <span id="receiptTotalAmount">$0.00</span>
+                </div>
+
+                <div class="receipt-divider">~ ~ ~</div>
+
+                <div class="emotional-insights">
+                    <h3>💭 Understanding Your Emotions</h3>
+                    <div id="emotionalMeanings"></div>
+                </div>
+
+                <div class="receipt-divider">~ ~ ~</div>
+
+                <div class="encouragement-section">
+                    <h3>💪 A Message For You</h3>
+                    <div id="encouragementMessage"></div>
+                </div>
+
+                <div class="receipt-footer-note">
+                    <p>Remember: All emotions are valid and temporary.</p>
+                    <p>You're doing great! ❤️</p>
+                </div>
+            </div>
+
+            <div class="receipt-actions">
+                <button class="save-receipt-btn" id="saveReceiptBtn">📥 Save Receipt</button>
+                <button class="new-shopping-btn" id="newShoppingBtn">Continue Shopping</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -197,8 +246,12 @@
     <!-- Face API JS for emotion detection -->
     <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
 
+    <!-- html2canvas for receipt saving -->
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
     <script src="products.js"></script>
     <script src="app.js"></script>
     <script src="emotion-detection.js"></script>
+    <script src="receipt.js"></script>
 </body>
 </html>
