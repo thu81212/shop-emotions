@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - claude/ecommerce-website-setup-011CV3XCwyC4Z4tVPvb43Tgn
+      - claude/ecommerce-emotions-012UEhRTDGucdWY1w9mpGEXJ
       - main
   workflow_dispatch:
 
