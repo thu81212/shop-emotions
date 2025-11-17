@@ -277,6 +277,17 @@ if (journalBtn) {
     });
 }
 
+// Hero Detect Emotion Button
+const detectEmotionHeroBtn = document.getElementById('detectEmotionBtnHero');
+if (detectEmotionHeroBtn) {
+    detectEmotionHeroBtn.addEventListener('click', () => {
+        // This function is defined in emotion-detection.js
+        if (typeof openEmotionDetection === 'function') {
+            openEmotionDetection();
+        }
+    });
+}
+
 // Local Storage
 function saveCart() {
     localStorage.setItem('shopEmotionsCart', JSON.stringify(cart));
