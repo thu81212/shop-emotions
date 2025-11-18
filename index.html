@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Fuzzy+Bubbles&display=swap" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
 </head>
 <body>
     <div class="front-page" data-name="front page" data-node-id="672:70">
@@ -80,7 +81,24 @@
             <span class="button-text" data-node-id="672:95">Detect My Emotion</span>
         </button>
     </div>
-    
+
+    <!-- Emotion Detection Modal -->
+    <div id="emotionModal" class="emotion-modal">
+        <div class="emotion-modal-content">
+            <span class="emotion-close">&times;</span>
+            <h2>Detect Your Emotion</h2>
+            <div class="camera-container">
+                <video id="videoElement" autoplay muted playsinline></video>
+                <canvas id="overlayCanvas"></canvas>
+            </div>
+            <div class="detection-status">
+                <p id="statusText">Initializing camera...</p>
+                <div id="emotionResult"></div>
+            </div>
+            <button id="captureBtn" class="capture-btn" disabled>Capture Emotion</button>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
