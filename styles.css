@@ -454,3 +454,148 @@ body {
     height: 85px;
     transform: translate(-50%, -35%);
 }
+
+/* Emotion Filters Section */
+.filters-section {
+    max-width: 1728px;
+    margin: 0 auto;
+    padding: 180px 200px 40px;
+    text-align: center;
+}
+
+.filters-title {
+    font-family: 'Bagel Fat One', cursive;
+    font-size: 32px;
+    color: #C5504B;
+    margin-bottom: 30px;
+}
+
+.filters-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter-btn {
+    padding: 10px 24px;
+    border: 2px solid #C5504B;
+    border-radius: 25px;
+    background: white;
+    color: #C5504B;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background: #C5504B;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(197, 80, 75, 0.3);
+}
+
+.filter-btn.active {
+    background: #C5504B;
+    color: white;
+}
+
+/* Product Info Enhancements */
+.product-info {
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    right: 0;
+    padding: 0 32px;
+    text-align: center;
+}
+
+.product-name {
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 12px;
+}
+
+.tags {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.tag {
+    padding: 4px 12px;
+    background: #F5F1E8;
+    border: 1px solid #C5504B;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #C5504B;
+}
+
+.description {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.price {
+    font-family: 'Bagel Fat One', cursive;
+    font-size: 24px;
+    color: #C5504B;
+    margin-top: 8px;
+}
+
+/* Add button positioning */
+.add-button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    background: #C5504B;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-button:hover {
+    background: #a94540;
+    transform: translateX(-50%) scale(1.1);
+}
+
+/* Hidden class for filtering */
+.hidden {
+    display: none !important;
+}
+
+/* Responsive adjustments for filters */
+@media (max-width: 768px) {
+    .filters-section {
+        padding: 150px 20px 30px;
+    }
+
+    .filters-title {
+        font-size: 24px;
+    }
+
+    .filter-btn {
+        font-size: 14px;
+        padding: 8px 18px;
+    }
+}

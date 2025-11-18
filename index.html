@@ -29,29 +29,44 @@
         </svg>
     </div>
 
+    <!-- Emotion Filters -->
+    <section class="filters-section">
+        <h2 class="filters-title">Browse by Emotion</h2>
+        <div class="filters-container">
+            <button class="filter-btn active" data-emotion="all">All</button>
+            <button class="filter-btn" data-emotion="happy">Happy</button>
+            <button class="filter-btn" data-emotion="calm">Calm</button>
+            <button class="filter-btn" data-emotion="excited">Excited</button>
+            <button class="filter-btn" data-emotion="sad">Sad</button>
+            <button class="filter-btn" data-emotion="playful">Playful</button>
+            <button class="filter-btn" data-emotion="frustrated">Frustrated</button>
+        </div>
+    </section>
+
     <!-- Main Content -->
     <main class="container">
         <!-- Row 1 -->
         <div class="product-row">
             <!-- Happy Product 1 -->
-            <div class="product-card">
+            <div class="product-card" data-emotions='["happy"]' data-price="14.99" data-id="1" data-name="Joy Smile">
                 <div class="emoticon happy-face">
                     <div class="eye left"></div>
                     <div class="eye right"></div>
                     <div class="mouth smile"></div>
                 </div>
                 <div class="product-info">
+                    <h3 class="product-name">Joy Smile</h3>
                     <div class="tags">
                         <span class="tag">Happy</span>
-                        <span class="tag">Fun</span>
                     </div>
                     <p class="description">A classic happy face for moments that feel warm, easy, and joyful.</p>
+                    <p class="price">$14.99</p>
                 </div>
                 <button class="add-button">+</button>
             </div>
 
             <!-- Neutral Product 2 -->
-            <div class="product-card">
+            <div class="product-card" data-emotions='["calm"]' data-price="12.99" data-id="2" data-name="Calm Neutral">
                 <div class="emoticon neutral-face">
                     <div class="eye left"></div>
                     <div class="eye right"></div>
@@ -59,17 +74,18 @@
                     <div class="mouth-cover"></div>
                 </div>
                 <div class="product-info">
+                    <h3 class="product-name">Calm Neutral</h3>
                     <div class="tags">
-                        <span class="tag">Happy</span>
-                        <span class="tag">Fun</span>
+                        <span class="tag">Calm</span>
                     </div>
-                    <p class="description">A classic happy face for moments that feel warm, easy, and joyful.</p>
+                    <p class="description">For balanced moments when you're feeling centered and peaceful.</p>
+                    <p class="price">$12.99</p>
                 </div>
                 <button class="add-button">+</button>
             </div>
 
             <!-- Wink Product 3 -->
-            <div class="product-card">
+            <div class="product-card" data-emotions='["playful","happy"]' data-price="16.99" data-id="3" data-name="Playful Wink">
                 <div class="emoticon wink-face">
                     <div class="eye left"></div>
                     <div class="eye-line right"></div>
@@ -77,11 +93,13 @@
                     <div class="mouth-cover"></div>
                 </div>
                 <div class="product-info">
+                    <h3 class="product-name">Playful Wink</h3>
                     <div class="tags">
+                        <span class="tag">Playful</span>
                         <span class="tag">Happy</span>
-                        <span class="tag">Fun</span>
                     </div>
-                    <p class="description">A classic happy face for moments that feel warm, easy, and joyful.</p>
+                    <p class="description">Flirty and fun, perfect for lighthearted and mischievous moments.</p>
+                    <p class="price">$16.99</p>
                 </div>
                 <button class="add-button">+</button>
             </div>
@@ -90,41 +108,43 @@
         <!-- Row 2 -->
         <div class="product-row">
             <!-- Shocked Product 4 -->
-            <div class="product-card">
+            <div class="product-card" data-emotions='["excited"]' data-price="18.99" data-id="4" data-name="Wow Shock">
                 <div class="emoticon shocked-face">
                     <div class="eye left"></div>
                     <div class="eye right"></div>
                     <div class="mouth shocked"></div>
                 </div>
                 <div class="product-info">
+                    <h3 class="product-name">Wow Shock</h3>
                     <div class="tags">
-                        <span class="tag">Happy</span>
-                        <span class="tag">Fun</span>
+                        <span class="tag">Excited</span>
                     </div>
-                    <p class="description">A classic happy face for moments that feel warm, easy, and joyful.</p>
+                    <p class="description">For those amazing moments of surprise and wonder that take your breath away.</p>
+                    <p class="price">$18.99</p>
                 </div>
                 <button class="add-button">+</button>
             </div>
 
             <!-- Sad Product 5 -->
-            <div class="product-card">
+            <div class="product-card" data-emotions='["sad"]' data-price="13.99" data-id="5" data-name="Blue Day">
                 <div class="emoticon sad-face">
                     <div class="eye left"></div>
                     <div class="eye right"></div>
                     <div class="mouth sad"></div>
                 </div>
                 <div class="product-info">
+                    <h3 class="product-name">Blue Day</h3>
                     <div class="tags">
-                        <span class="tag">Happy</span>
-                        <span class="tag">Fun</span>
+                        <span class="tag">Sad</span>
                     </div>
-                    <p class="description">A classic happy face for moments that feel warm, easy, and joyful.</p>
+                    <p class="description">When you're feeling down and need comfort for those melancholy moments.</p>
+                    <p class="price">$13.99</p>
                 </div>
                 <button class="add-button">+</button>
             </div>
 
             <!-- Sad Product 6 -->
-            <div class="product-card">
+            <div class="product-card" data-emotions='["sad"]' data-price="14.99" data-id="6" data-name="Gentle Sorrow">
                 <div class="emoticon sad-face-alt">
                     <div class="eye left"></div>
                     <div class="eye right"></div>
@@ -132,11 +152,12 @@
                     <div class="mouth-cover"></div>
                 </div>
                 <div class="product-info">
+                    <h3 class="product-name">Gentle Sorrow</h3>
                     <div class="tags">
-                        <span class="tag">Happy</span>
-                        <span class="tag">Fun</span>
+                        <span class="tag">Sad</span>
                     </div>
-                    <p class="description">A classic happy face for moments that feel warm, easy, and joyful.</p>
+                    <p class="description">A softer sadness for quiet reflection and emotional processing.</p>
+                    <p class="price">$14.99</p>
                 </div>
                 <button class="add-button">+</button>
             </div>
@@ -145,41 +166,44 @@
         <!-- Row 3 -->
         <div class="product-row">
             <!-- Relaxed Product 7 -->
-            <div class="product-card">
+            <div class="product-card" data-emotions='["calm","happy"]' data-price="15.99" data-id="7" data-name="Zen Bliss">
                 <div class="emoticon relaxed-face">
                     <div class="eye-relaxed left"></div>
                     <div class="eye-relaxed right"></div>
                     <div class="mouth relaxed"></div>
                 </div>
                 <div class="product-info">
+                    <h3 class="product-name">Zen Bliss</h3>
                     <div class="tags">
+                        <span class="tag">Calm</span>
                         <span class="tag">Happy</span>
-                        <span class="tag">Fun</span>
                     </div>
-                    <p class="description">A classic happy face for moments that feel warm, easy, and joyful.</p>
+                    <p class="description">Pure relaxation and contentment for those peaceful, stress-free moments.</p>
+                    <p class="price">$15.99</p>
                 </div>
                 <button class="add-button">+</button>
             </div>
 
             <!-- Frustrated Product 8 -->
-            <div class="product-card">
+            <div class="product-card" data-emotions='["frustrated"]' data-price="17.99" data-id="8" data-name="Grumpy Mode">
                 <div class="emoticon frustrated-face">
                     <div class="eye left"></div>
                     <div class="eye right"></div>
                     <div class="mouth frustrated"></div>
                 </div>
                 <div class="product-info">
+                    <h3 class="product-name">Grumpy Mode</h3>
                     <div class="tags">
-                        <span class="tag">Happy</span>
-                        <span class="tag">Fun</span>
+                        <span class="tag">Frustrated</span>
                     </div>
-                    <p class="description">A classic happy face for moments that feel warm, easy, and joyful.</p>
+                    <p class="description">When things aren't going your way and you need to vent those feelings.</p>
+                    <p class="price">$17.99</p>
                 </div>
                 <button class="add-button">+</button>
             </div>
 
             <!-- Sad Product 9 -->
-            <div class="product-card">
+            <div class="product-card" data-emotions='["sad","calm"]' data-price="13.99" data-id="9" data-name="Soft Tears">
                 <div class="emoticon sad-face-round">
                     <div class="eye left"></div>
                     <div class="eye right"></div>
@@ -187,11 +211,13 @@
                     <div class="mouth-cover"></div>
                 </div>
                 <div class="product-info">
+                    <h3 class="product-name">Soft Tears</h3>
                     <div class="tags">
-                        <span class="tag">Happy</span>
-                        <span class="tag">Fun</span>
+                        <span class="tag">Sad</span>
+                        <span class="tag">Calm</span>
                     </div>
-                    <p class="description">A classic happy face for moments that feel warm, easy, and joyful.</p>
+                    <p class="description">Gentle sadness mixed with acceptance during difficult times.</p>
+                    <p class="price">$13.99</p>
                 </div>
                 <button class="add-button">+</button>
             </div>
@@ -200,7 +226,7 @@
         <!-- Row 4 -->
         <div class="product-row">
             <!-- Star Eyes Product 10 -->
-            <div class="product-card">
+            <div class="product-card" data-emotions='["excited","happy"]' data-price="19.99" data-id="10" data-name="Starstruck">
                 <div class="emoticon star-face">
                     <div class="star left"></div>
                     <div class="star right"></div>
@@ -208,45 +234,51 @@
                     <div class="mouth-cover"></div>
                 </div>
                 <div class="product-info">
+                    <h3 class="product-name">Starstruck</h3>
                     <div class="tags">
+                        <span class="tag">Excited</span>
                         <span class="tag">Happy</span>
-                        <span class="tag">Fun</span>
                     </div>
-                    <p class="description">A classic happy face for moments that feel warm, easy, and joyful.</p>
+                    <p class="description">For those magical moments when you're absolutely amazed and thrilled!</p>
+                    <p class="price">$19.99</p>
                 </div>
                 <button class="add-button">+</button>
             </div>
 
             <!-- Unhappy Product 11 -->
-            <div class="product-card">
+            <div class="product-card" data-emotions='["frustrated","sad"]' data-price="14.99" data-id="11" data-name="Discontent">
                 <div class="emoticon unhappy-face">
                     <div class="eye left"></div>
                     <div class="eye right"></div>
                     <div class="mouth unhappy"></div>
                 </div>
                 <div class="product-info">
+                    <h3 class="product-name">Discontent</h3>
                     <div class="tags">
-                        <span class="tag">Happy</span>
-                        <span class="tag">Fun</span>
+                        <span class="tag">Frustrated</span>
+                        <span class="tag">Sad</span>
                     </div>
-                    <p class="description">A classic happy face for moments that feel warm, easy, and joyful.</p>
+                    <p class="description">When you're unsatisfied and things just feel off or disappointing.</p>
+                    <p class="price">$14.99</p>
                 </div>
                 <button class="add-button">+</button>
             </div>
 
             <!-- Nervous Product 12 -->
-            <div class="product-card">
+            <div class="product-card" data-emotions='["excited","frustrated"]' data-price="16.99" data-id="12" data-name="Anxious Energy">
                 <div class="emoticon nervous-face">
                     <div class="eye left"></div>
                     <div class="eye right"></div>
                     <div class="mouth nervous"></div>
                 </div>
                 <div class="product-info">
+                    <h3 class="product-name">Anxious Energy</h3>
                     <div class="tags">
-                        <span class="tag">Happy</span>
-                        <span class="tag">Fun</span>
+                        <span class="tag">Excited</span>
+                        <span class="tag">Frustrated</span>
                     </div>
-                    <p class="description">A classic happy face for moments that feel warm, easy, and joyful.</p>
+                    <p class="description">That nervous, jittery feeling when you're wound up and need release.</p>
+                    <p class="price">$16.99</p>
                 </div>
                 <button class="add-button">+</button>
             </div>
