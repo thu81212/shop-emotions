@@ -3,145 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop Emotions - Find Products That Match Your Mood</title>
+    <title>Shop Your Emotions</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Fuzzy+Bubbles&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="logo">
-                <h1>Shop Your Emotions</h1>
-            </div>
-            <nav>
-                <button class="cart-btn" id="cartBtn">
-                    <span class="cart-icon">🛒</span>
-                    <span class="cart-count" id="cartCount">0</span>
-                </button>
-            </nav>
+    <div class="front-page" data-name="front page" data-node-id="672:70">
+        <!-- Header Background -->
+        <div class="header-bg" data-node-id="672:71"></div>
+        
+        <!-- Shop Your Emotions Title -->
+        <div class="title" data-node-id="672:72">
+            <p>Shop Your Emotions</p>
         </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container">
-            <div class="blob blob-1"></div>
-            <div class="blob blob-2"></div>
-            <div class="blob blob-3"></div>
-            <div class="blob blob-4"></div>
-            <div class="blob blob-5"></div>
-
-            <h2 class="hero-title">How are you<br>feeling today?</h2>
-
-            <div class="hero-illustration">
-                <img src="website front page.png" alt="Meditation" class="meditation-img">
-            </div>
-
-            <button class="detect-emotion-hero-btn" id="detectEmotionBtnHero">
-                📸 Detect My Emotion
-            </button>
-        </div>
-    </section>
-
-    <!-- Emotion Detection Modal -->
-    <div class="emotion-detection-modal" id="emotionModal">
-        <div class="emotion-detection-content">
-            <div class="emotion-detection-header">
-                <h2>Detect Your Emotion</h2>
-                <button class="close-btn" id="closeEmotionModal">&times;</button>
-            </div>
-            <div class="video-container">
-                <video id="videoElement" autoplay playsinline></video>
-                <canvas id="overlayCanvas"></canvas>
-            </div>
-            <div class="detection-status" id="detectionStatus">
-                <p>Position your face in the camera...</p>
-            </div>
-            <div class="detection-result" id="detectionResult" style="display: none;">
-                <h3>We detected you're feeling: <span id="detectedEmotion"></span></h3>
-                <p>Adding products to your cart...</p>
+        
+        <!-- Shopping Cart Button -->
+        <div class="cart-container" data-node-id="672:73">
+            <div class="cart-icon" data-name="Shopping Cart" data-node-id="672:74">
+                <img src="https://www.figma.com/api/mcp/asset/0de30653-ead9-46cd-a72b-d71108fdb89d" alt="Shopping Cart">
             </div>
         </div>
+        
+        <!-- Decorative Ellipses (Background shapes) -->
+        <div class="ellipse ellipse-98" data-node-id="672:76">
+            <img src="https://www.figma.com/api/mcp/asset/913ad5d3-b0fd-4391-87eb-18685195e6d7" alt="">
+        </div>
+        
+        <div class="ellipse ellipse-99" data-node-id="672:77">
+            <img src="https://www.figma.com/api/mcp/asset/bc06a8a1-07a8-4c87-b14f-03d0b9828df1" alt="">
+        </div>
+        
+        <div class="ellipse ellipse-100" data-node-id="672:78">
+            <img src="https://www.figma.com/api/mcp/asset/6a07bf8b-5264-400f-934c-e6b736cd6029" alt="">
+        </div>
+        
+        <div class="ellipse ellipse-101" data-node-id="672:79">
+            <img src="https://www.figma.com/api/mcp/asset/0e7a964b-a5be-40b2-bf01-0ef7b496062a" alt="">
+        </div>
+        
+        <div class="ellipse ellipse-102" data-node-id="672:80">
+            <img src="https://www.figma.com/api/mcp/asset/1356c09c-2380-44cf-97bd-161bbed959da" alt="">
+        </div>
+        
+        <div class="ellipse ellipse-103" data-node-id="672:81">
+            <img src="https://www.figma.com/api/mcp/asset/91130ba3-9e83-47b1-b8dc-7770f214cd68" alt="">
+        </div>
+        
+        <div class="ellipse ellipse-104" data-node-id="672:82">
+            <img src="https://www.figma.com/api/mcp/asset/4a706b2b-1f0f-4295-9885-73fb175d84e8" alt="">
+        </div>
+        
+        <div class="ellipse ellipse-105" data-node-id="672:83">
+            <img src="https://www.figma.com/api/mcp/asset/dd52d7bd-ab97-4b84-ac4f-9ebce155376a" alt="">
+        </div>
+        
+        <!-- Meditating Woman Illustration -->
+        <div class="meditating-woman" data-name="meditating woman" data-node-id="672:84">
+            <img src="https://www.figma.com/api/mcp/asset/05e614e6-220b-4ad9-b83f-9783690fa33d" alt="Meditating Woman">
+        </div>
+        
+        <!-- "How are you feeling today?" Text -->
+        <div class="feeling-text" data-node-id="672:86">
+            <p>How are you<br>feeling today?</p>
+        </div>
+        
+        <!-- Double Down Arrow -->
+        <div class="double-down" data-name="Double Down" data-node-id="672:91">
+            <img src="https://www.figma.com/api/mcp/asset/fd559b02-b5ad-4fff-880e-543ac2cf46d2" alt="Double Down Arrow">
+        </div>
+        
+        <!-- Detect My Emotion Button -->
+        <button class="detect-button" data-node-id="672:94">
+            <img class="camera-icon" src="https://www.figma.com/api/mcp/asset/d9f759e0-77cb-46b7-86f2-54bab05db099" alt="Camera" data-node-id="672:96">
+            <span class="button-text" data-node-id="672:95">Detect My Emotion</span>
+        </button>
     </div>
-
-    <!-- Shopping Cart Modal -->
-    <div class="cart-modal" id="cartModal">
-        <div class="cart-content">
-            <div class="cart-header">
-                <h2>Your Cart</h2>
-                <button class="close-btn" id="closeCart">&times;</button>
-            </div>
-            <div class="cart-items" id="cartItems">
-                <!-- Cart items will be dynamically inserted here -->
-            </div>
-            <div class="cart-footer">
-                <div class="cart-total">
-                    <span>Total:</span>
-                    <span class="total-amount" id="totalAmount">$0.00</span>
-                </div>
-                <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Receipt Modal -->
-    <div class="receipt-modal" id="receiptModal">
-        <div class="receipt-content" id="receiptContent">
-            <div class="receipt-header">
-                <h2>💝 Your Emotional Receipt</h2>
-                <button class="close-btn" id="closeReceipt">&times;</button>
-            </div>
-
-            <div class="receipt-body">
-                <div class="receipt-date" id="receiptDate"></div>
-
-                <div class="receipt-divider">✨ ✨ ✨</div>
-
-                <div class="receipt-items" id="receiptItems">
-                    <!-- Receipt items will be inserted here -->
-                </div>
-
-                <div class="receipt-total">
-                    <span>Total:</span>
-                    <span id="receiptTotalAmount">$0.00</span>
-                </div>
-
-                <div class="receipt-divider">~ ~ ~</div>
-
-                <div class="emotional-insights">
-                    <h3>💭 Understanding Your Emotions</h3>
-                    <div id="emotionalMeanings"></div>
-                </div>
-
-                <div class="receipt-divider">~ ~ ~</div>
-
-                <div class="encouragement-section">
-                    <h3>💪 A Message For You</h3>
-                    <div id="encouragementMessage"></div>
-                </div>
-
-                <div class="receipt-footer-note">
-                    <p>Remember: All emotions are valid and temporary.</p>
-                    <p>You're doing great! ❤️</p>
-                </div>
-            </div>
-
-            <div class="receipt-actions">
-                <button class="save-receipt-btn" id="saveReceiptBtn">📥 Save Receipt</button>
-                <button class="new-shopping-btn" id="newShoppingBtn">Continue Shopping</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Face API JS for emotion detection -->
-    <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
-
-    <!-- html2canvas for receipt saving -->
-    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
-
-    <script src="products.js"></script>
-    <script src="app.js"></script>
-    <script src="emotion-detection.js"></script>
-    <script src="receipt.js"></script>
+    
+    <script src="script.js"></script>
 </body>
 </html>

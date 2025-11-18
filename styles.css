@@ -5,2497 +5,312 @@
     box-sizing: border-box;
 }
 
-:root {
-    --primary-color: #d64545;
-    --secondary-color: #e67373;
-    --accent-yellow: #f4c430;
-    --accent-pink: #ff9bb5;
-    --accent-blue: #5b9bd5;
-    --accent-green: #4caf50;
-    --background: #f5f1e8;
-    --card-bg: #ffffff;
-    --text-primary: #2d2d2d;
-    --text-secondary: #8a8a8a;
-    --border-color: #e5ddd0;
-    --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
-}
-
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    line-height: 1.6;
-    color: var(--text-primary);
-    background: var(--background);
+    font-family: Arial, sans-serif;
     overflow-x: hidden;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Header */
-header {
-    background: var(--primary-color);
-    color: white;
-    padding: 1.5rem 0;
-    box-shadow: var(--shadow);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo h1 {
-    font-size: 2rem;
-    font-weight: 800;
-    margin-bottom: 0.25rem;
-}
-
-.tagline {
-    font-size: 0.875rem;
-    opacity: 0.9;
-    font-weight: 300;
-}
-
-nav {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
-
-.journal-btn,
-.cart-btn {
-    background: rgba(255, 255, 255, 0.2);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border-radius: 50px;
-    cursor: pointer;
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-    font-weight: 600;
-}
-
-.journal-btn:hover,
-.cart-btn:hover {
-    background: rgba(255, 255, 255, 0.3);
-    transform: translateY(-2px);
-}
-
-.journal-icon,
-.cart-icon {
-    font-size: 1.25rem;
-}
-
-.cart-count {
-    background: white;
-    color: var(--primary-color);
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 0.875rem;
-}
-
-/* Hero Section */
-.hero-section {
-    background: var(--background);
-    padding: 4rem 0 3rem;
+/* Main Container */
+.front-page {
+    background-color: #f5f1e8;
     position: relative;
+    width: 1728px;
+    height: 1117px;
     overflow: hidden;
-    min-height: 500px;
 }
 
-.hero-section .container {
-    position: relative;
-    z-index: 10;
+/* Header Background */
+.header-bg {
+    position: absolute;
+    background-color: #c5504b;
+    height: 143px;
+    left: 0;
+    top: 0;
+    width: 1728px;
+}
+
+/* Title */
+.title {
+    position: absolute;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    font-family: 'Bagel Fat One', cursive;
+    height: 173px;
+    justify-content: center;
+    line-height: 0;
+    left: 101px;
+    font-style: normal;
+    color: #f5f1e8;
+    font-size: 63px;
+    top: 64.5px;
+    transform: translateY(-50%);
+    width: 682px;
 }
 
-/* Decorative Blobs */
-.blob {
+.title p {
+    line-height: 1.3;
+    white-space: pre-wrap;
+}
+
+/* Shopping Cart Container */
+.cart-container {
     position: absolute;
-    opacity: 0.7;
-    animation: float 8s ease-in-out infinite;
+    background-color: #f5f1e8;
+    height: 71px;
+    left: 1534px;
+    border-radius: 35.5px;
+    top: 36px;
+    width: 101px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
 }
 
-.blob-1 {
-    width: 150px;
-    height: 150px;
-    background: linear-gradient(135deg, #FFB5D5, #FFC9E0);
-    border-radius: 65% 35% 70% 30% / 45% 60% 40% 55%;
-    top: 10%;
-    left: 5%;
-    animation-delay: 0s;
+.cart-container:hover {
+    transform: scale(1.05);
 }
 
-.blob-2 {
-    width: 120px;
-    height: 120px;
-    background: linear-gradient(135deg, #FFE484, #FFF0A8);
-    border-radius: 45% 55% 40% 60% / 60% 40% 60% 40%;
-    top: 15%;
-    right: 8%;
-    animation-delay: 1s;
+.cart-icon {
+    position: absolute;
+    left: 28px;
+    width: 46px;
+    height: 46px;
+    top: 13px;
 }
 
-.blob-3 {
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(135deg, #FFB5D5, #FFC9E0);
-    border-radius: 55% 45% 50% 50% / 50% 50% 50% 50%;
-    bottom: 20%;
-    left: 10%;
-    animation-delay: 2s;
+.cart-icon img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: 50% 50%;
+    pointer-events: none;
 }
 
-.blob-4 {
-    width: 130px;
-    height: 130px;
-    background: linear-gradient(135deg, #FFE484, #FFF0A8);
-    border-radius: 50% 50% 30% 70% / 60% 40% 60% 40%;
-    top: 50%;
-    right: 5%;
-    animation-delay: 1.5s;
+/* Decorative Ellipses */
+.ellipse {
+    position: absolute;
 }
 
-.blob-5 {
-    width: 110px;
-    height: 110px;
-    background: linear-gradient(135deg, #FFC9E0, #FFD5E8);
-    border-radius: 40% 60% 50% 50% / 55% 45% 55% 45%;
-    bottom: 15%;
-    right: 15%;
-    animation-delay: 0.5s;
+.ellipse img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: none;
 }
 
-@keyframes float {
+.ellipse-98 {
+    height: 275px;
+    left: 143px;
+    top: 559px;
+    width: 580px;
+}
+
+.ellipse-99 {
+    left: 362px;
+    top: 309px;
+    width: 400.344px;
+    height: 200.043px;
+    transform: rotate(23.492deg);
+}
+
+.ellipse-100 {
+    left: 1112.46px;
+    top: 576.41px;
+    width: 493.465px;
+    height: 161.366px;
+    transform: rotate(15deg);
+}
+
+.ellipse-101 {
+    left: 1237.96px;
+    top: 521.43px;
+    width: 287.967px;
+    height: 94.167px;
+    transform: rotate(345deg);
+}
+
+.ellipse-102 {
+    left: 1068px;
+    top: 268px;
+    width: 216.695px;
+    height: 228.77px;
+    transform: rotate(60deg);
+}
+
+.ellipse-103 {
+    left: 1587.95px;
+    top: 593px;
+    width: 93px;
+    height: 98px;
+    transform: rotate(90deg);
+}
+
+.ellipse-104 {
+    left: 290.06px;
+    top: 193px;
+    width: 132.055px;
+    height: 139.414px;
+    transform: rotate(112.248deg);
+}
+
+.ellipse-105 {
+    left: 43px;
+    top: 429.79px;
+    width: 133.425px;
+    height: 140.756px;
+    transform: rotate(75deg) scaleY(-1);
+}
+
+/* Meditating Woman */
+.meditating-woman {
+    position: absolute;
+    height: 469px;
+    left: 581px;
+    top: 417px;
+    width: 640px;
+}
+
+.meditating-woman img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: 50% 50%;
+    pointer-events: none;
+}
+
+/* "How are you feeling today?" Text */
+.feeling-text {
+    position: absolute;
+    font-family: 'Fuzzy Bubbles', cursive;
+    line-height: 1.3;
+    left: 900.5px;
+    font-style: normal;
+    color: #c5504b;
+    font-size: 60px;
+    text-align: center;
+    top: 190px;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.feeling-text p {
+    margin: 0;
+}
+
+/* Double Down Arrow */
+.double-down {
+    position: absolute;
+    left: 876px;
+    width: 57px;
+    height: 57px;
+    top: 1060px;
+    animation: bounce 2s infinite;
+}
+
+.double-down img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: 50% 50%;
+    pointer-events: none;
+}
+
+@keyframes bounce {
     0%, 100% {
-        transform: translate(0, 0) rotate(0deg);
-    }
-    25% {
-        transform: translate(10px, -15px) rotate(5deg);
+        transform: translateY(0);
     }
     50% {
-        transform: translate(-10px, -10px) rotate(-5deg);
-    }
-    75% {
-        transform: translate(15px, 10px) rotate(3deg);
+        transform: translateY(-10px);
     }
 }
 
-/* Hero Title */
-.hero-title {
-    font-size: 3rem;
-    line-height: 1.2;
-    color: #C85A5A;
-    font-weight: 400;
-    margin: 0 0 2rem 0;
-    font-family: 'Brush Script MT', 'Segoe Script', cursive;
-    letter-spacing: 0.5px;
-}
-
-/* Hero Illustration */
-.hero-illustration {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto 2rem;
+/* Detect My Emotion Button */
+.detect-button {
+    position: absolute;
+    background-color: #c5504b;
+    border: 10px solid #ffe4d9;
+    height: 103px;
+    left: 723px;
+    border-radius: 69px;
+    top: 939px;
+    width: 364px;
+    cursor: pointer;
+    transition: all 0.3s ease;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    gap: 15px;
 }
 
-.meditation-img {
-    width: 100%;
-    height: auto;
-    max-width: 350px;
+.detect-button:hover {
+    background-color: #b34641;
+    transform: scale(1.05);
+}
+
+.detect-button:active {
+    transform: scale(0.98);
+}
+
+.camera-icon {
+    width: 39px;
+    height: 39px;
     object-fit: contain;
 }
 
-/* Hero Detect Emotion Button */
-.detect-emotion-hero-btn {
-    padding: 1rem 2.5rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-    background: linear-gradient(135deg, #C85A5A, #D67373);
-    color: white;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    box-shadow: 0 8px 24px rgba(200, 90, 90, 0.3);
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.detect-emotion-hero-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 32px rgba(200, 90, 90, 0.4);
-    background: linear-gradient(135deg, #D67373, #E68989);
-}
-
-.detect-emotion-hero-btn:active {
-    transform: translateY(-1px);
-}
-
-/* Emotion Filter Section */
-.emotion-filter {
-    padding: 3rem 0;
-    background: var(--background);
-    border-bottom: 1px solid var(--border-color);
-}
-
-.emotion-filter h2 {
+.button-text {
+    font-family: 'Bagel Fat One', cursive;
+    line-height: 1.3;
+    font-style: normal;
+    color: #f5f1e8;
+    font-size: 25px;
     text-align: center;
-    margin-bottom: 1.5rem;
-    font-size: 2rem;
-    color: var(--primary-color);
-    font-weight: 700;
-}
-
-/* Hide the duplicate detect emotion button since we have one in the hero */
-.detect-emotion-btn {
-    display: none;
-}
-
-.detect-emotion-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 32px rgba(214, 69, 69, 0.3);
-}
-
-.detect-emotion-btn:active {
-    transform: translateY(-1px);
-}
-
-.emotion-buttons {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.emotion-btn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    width: 120px;
-    height: 120px;
-    border: none;
-    background: white;
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    position: relative;
-    box-shadow: var(--shadow);
-}
-
-/* Organic blob shapes for each emotion */
-.emotion-btn[data-emotion="all"] {
-    border-radius: 50% 50% 50% 50% / 45% 55% 45% 55%;
-    background: #ffd93d; /* Bright yellow - inclusive, neutral */
-}
-
-.emotion-btn[data-emotion="happy"] {
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    background: #ffeb3b; /* Sunny yellow - joy, happiness */
-}
-
-.emotion-btn[data-emotion="sad"] {
-    border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
-    background: #5c8aa8; /* Deep blue - sadness, melancholy */
-}
-
-.emotion-btn[data-emotion="calm"] {
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    background: #81d4fa; /* Soft sky blue - peaceful, serene */
-}
-
-.emotion-btn[data-emotion="anxious"] {
-    border-radius: 45% 55% 50% 50% / 55% 45% 55% 45%;
-    background: #9575cd; /* Purple - worry, tension */
-}
-
-.emotion-btn[data-emotion="angry"] {
-    border-radius: 35% 65% 35% 65% / 65% 35% 65% 35%;
-    background: #e53935; /* Deeper red - intense anger, fury */
-}
-
-.emotion-btn[data-emotion="excited"] {
-    border-radius: 50% 50% 20% 80% / 80% 20% 80% 20%;
-    background: #ff6ec7; /* Hot pink - energetic, enthusiastic */
-}
-
-.emotion-btn[data-emotion="nostalgic"] {
-    border-radius: 55% 45% 45% 55% / 45% 55% 45% 55%;
-    background: #b39ddb; /* Soft purple - bittersweet memories */
-}
-
-.emotion-btn[data-emotion="hopeful"] {
-    border-radius: 50% 50% 50% 50% / 60% 40% 60% 40%;
-    background: #81c784; /* Soft green - optimism, possibility */
-}
-
-/* Face elements */
-.emotion-btn .face {
-    width: 60px;
-    height: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-}
-
-.emotion-btn .eyes {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-}
-
-.emotion-btn .eye {
-    width: 8px;
-    height: 8px;
-    background: #2d2d2d;
-    border-radius: 50%;
-}
-
-.emotion-btn .mouth {
-    width: 20px;
-    height: 10px;
-    border: 2px solid #2d2d2d;
-    border-top: none;
-    border-radius: 0 0 20px 20px;
-}
-
-/* Different expressions for each emotion */
-/* All - neutral face */
-.emotion-btn[data-emotion="all"] .mouth {
-    width: 20px;
-    height: 10px;
-}
-
-/* Happy - big smile */
-.emotion-btn[data-emotion="happy"] .mouth {
-    width: 24px;
-    height: 12px;
-}
-
-/* Sad - frown with downturned eyes */
-.emotion-btn[data-emotion="sad"] .eye {
-    width: 7px;
-    height: 7px;
-}
-
-.emotion-btn[data-emotion="sad"] .mouth {
-    width: 20px;
-    height: 10px;
-    border: 2px solid #2d2d2d;
-    border-bottom: none;
-    border-top: 2px solid #2d2d2d;
-    border-radius: 20px 20px 0 0;
-    transform: translateY(4px);
-}
-
-/* Calm - relaxed smile, peaceful eyes */
-.emotion-btn[data-emotion="calm"] .eye {
-    height: 4px;
-    border-radius: 2px;
-}
-
-.emotion-btn[data-emotion="calm"] .mouth {
-    width: 18px;
-    height: 6px;
-}
-
-/* Anxious - worried expression */
-.emotion-btn[data-emotion="anxious"] .eye {
-    width: 6px;
-    height: 9px;
-    border-radius: 50%;
-}
-
-.emotion-btn[data-emotion="anxious"] .mouth {
-    width: 16px;
-    height: 4px;
-    border-radius: 0;
-    border: 1.5px solid #2d2d2d;
-    border-top: none;
-    border-bottom: none;
-    border-left: none;
-    border-right: none;
-    background: #2d2d2d;
-}
-
-/* Angry - furious expression with sharp eyebrows */
-.emotion-btn[data-emotion="angry"] .eyes {
-    position: relative;
-}
-
-.emotion-btn[data-emotion="angry"] .eyes::before {
-    content: '';
-    position: absolute;
-    top: -6px;
-    left: -2px;
-    width: 14px;
-    height: 4px;
-    background: #2d2d2d;
-    border-radius: 1px;
-    transform: rotate(-25deg);
-}
-
-.emotion-btn[data-emotion="angry"] .eyes::after {
-    content: '';
-    position: absolute;
-    top: -6px;
-    right: -2px;
-    width: 14px;
-    height: 4px;
-    background: #2d2d2d;
-    border-radius: 1px;
-    transform: rotate(25deg);
-}
-
-.emotion-btn[data-emotion="angry"] .eye {
-    width: 7px;
-    height: 9px;
-    border-radius: 40%;
-}
-
-.emotion-btn[data-emotion="angry"] .mouth {
-    width: 20px;
-    height: 14px;
-    border: 3px solid #2d2d2d;
-    border-bottom: none;
-    border-top: 3px solid #2d2d2d;
-    border-radius: 22px 22px 0 0;
-    transform: translateY(2px);
-}
-
-/* Excited - star eyes, open mouth */
-.emotion-btn[data-emotion="excited"] .eye {
-    width: 10px;
-    height: 10px;
-    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-}
-
-.emotion-btn[data-emotion="excited"] .mouth {
-    width: 22px;
-    height: 16px;
-    border-radius: 50%;
-    border-top: 2px solid #2d2d2d;
-}
-
-/* Nostalgic - wistful, looking away */
-.emotion-btn[data-emotion="nostalgic"] .eyes {
-    gap: 14px;
-}
-
-.emotion-btn[data-emotion="nostalgic"] .eye {
-    width: 7px;
-    height: 7px;
-}
-
-.emotion-btn[data-emotion="nostalgic"] .mouth {
-    width: 18px;
-    height: 7px;
-}
-
-/* Hopeful - gentle smile, bright eyes */
-.emotion-btn[data-emotion="hopeful"] .eye {
-    width: 8px;
-    height: 9px;
-}
-
-.emotion-btn[data-emotion="hopeful"] .mouth {
-    width: 22px;
-    height: 10px;
-}
-
-.emotion-btn:hover {
-    transform: translateY(-8px) scale(1.05);
-    box-shadow: var(--shadow-lg);
-}
-
-.emotion-btn.active {
-    transform: scale(1.1);
-    box-shadow: 0 0 0 4px var(--primary-color), var(--shadow-lg);
-}
-
-/* Products Section */
-.products {
-    padding: 3rem 0;
-}
-
-.products-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.products-header h2 {
-    font-size: 1.75rem;
-    color: var(--text-primary);
-}
-
-.sort-options select {
-    padding: 0.75rem 1.25rem;
-    border: 1px solid var(--border-color);
-    border-radius: 25px;
-    background: white;
-    color: var(--text-primary);
-    cursor: pointer;
-    font-size: 0.875rem;
-    transition: all 0.3s ease;
-    box-shadow: var(--shadow);
-}
-
-.sort-options select:hover {
-    border-color: var(--primary-color);
-    box-shadow: var(--shadow-lg);
-}
-
-.sort-options select:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(214, 69, 69, 0.1);
-}
-
-/* Products Grid */
-.products-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.5rem;
-}
-
-.product-card {
-    background: var(--card-bg);
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid var(--border-color);
-}
-
-.product-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-lg);
-}
-
-.product-image {
-    width: 100%;
-    height: 220px;
-    object-fit: contain;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    position: relative;
-}
-
-/* Product Shape Styles */
-.product-shape {
-    width: 100px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.shape-face {
-    width: 80px;
-    height: 80px;
-    background: rgba(255, 255, 255, 0.3);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    position: relative;
-}
-
-.shape-eyes {
-    display: flex;
-    gap: 16px;
-    align-items: center;
-}
-
-.shape-eye {
-    width: 10px;
-    height: 10px;
-    background: #2d2d2d;
-    border-radius: 50%;
-}
-
-.shape-mouth {
-    width: 24px;
-    height: 12px;
-    border: 2.5px solid #2d2d2d;
-    border-top: none;
-    border-radius: 0 0 24px 24px;
-}
-
-/* Emotion-specific shapes for products with variations */
-/* Happy - 4 variants */
-.product-shape[data-emotion="happy"][data-variant="1"] .shape-face {
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    background: rgba(255, 235, 59, 0.3);
-}
-.product-shape[data-emotion="happy"][data-variant="2"] .shape-face {
-    border-radius: 55% 45% 40% 60% / 55% 45% 65% 35%;
-    background: rgba(255, 235, 59, 0.3);
-}
-.product-shape[data-emotion="happy"][data-variant="3"] .shape-face {
-    border-radius: 65% 35% 35% 65% / 50% 40% 60% 50%;
-    background: rgba(255, 235, 59, 0.3);
-}
-.product-shape[data-emotion="happy"][data-variant="4"] .shape-face {
-    border-radius: 50% 50% 25% 75% / 65% 35% 65% 35%;
-    background: rgba(255, 235, 59, 0.3);
-}
-
-/* Sad - 4 variants */
-.product-shape[data-emotion="sad"][data-variant="1"] .shape-face {
-    border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
-    background: rgba(92, 138, 168, 0.3);
-}
-.product-shape[data-emotion="sad"][data-variant="2"] .shape-face {
-    border-radius: 45% 55% 45% 55% / 35% 35% 65% 65%;
-    background: rgba(92, 138, 168, 0.3);
-}
-.product-shape[data-emotion="sad"][data-variant="3"] .shape-face {
-    border-radius: 55% 45% 55% 45% / 25% 35% 75% 65%;
-    background: rgba(92, 138, 168, 0.3);
-}
-.product-shape[data-emotion="sad"][data-variant="4"] .shape-face {
-    border-radius: 48% 52% 48% 52% / 32% 28% 72% 68%;
-    background: rgba(92, 138, 168, 0.3);
-}
-
-/* Calm - 4 variants */
-.product-shape[data-emotion="calm"][data-variant="1"] .shape-face {
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    background: rgba(129, 212, 250, 0.3);
-}
-.product-shape[data-emotion="calm"][data-variant="2"] .shape-face {
-    border-radius: 35% 65% 65% 35% / 35% 35% 65% 65%;
-    background: rgba(129, 212, 250, 0.3);
-}
-.product-shape[data-emotion="calm"][data-variant="3"] .shape-face {
-    border-radius: 25% 75% 75% 25% / 28% 32% 68% 72%;
-    background: rgba(129, 212, 250, 0.3);
-}
-.product-shape[data-emotion="calm"][data-variant="4"] .shape-face {
-    border-radius: 32% 68% 68% 32% / 32% 28% 72% 68%;
-    background: rgba(129, 212, 250, 0.3);
-}
-
-/* Anxious - 4 variants */
-.product-shape[data-emotion="anxious"][data-variant="1"] .shape-face {
-    border-radius: 45% 55% 50% 50% / 55% 45% 55% 45%;
-    background: rgba(149, 117, 205, 0.3);
-}
-.product-shape[data-emotion="anxious"][data-variant="2"] .shape-face {
-    border-radius: 48% 52% 47% 53% / 52% 48% 52% 48%;
-    background: rgba(149, 117, 205, 0.3);
-}
-.product-shape[data-emotion="anxious"][data-variant="3"] .shape-face {
-    border-radius: 42% 58% 53% 47% / 58% 42% 58% 42%;
-    background: rgba(149, 117, 205, 0.3);
-}
-.product-shape[data-emotion="anxious"][data-variant="4"] .shape-face {
-    border-radius: 47% 53% 48% 52% / 53% 47% 53% 47%;
-    background: rgba(149, 117, 205, 0.3);
-}
-
-/* Angry - 4 variants */
-.product-shape[data-emotion="angry"][data-variant="1"] .shape-face {
-    border-radius: 35% 65% 35% 65% / 65% 35% 65% 35%;
-    background: rgba(229, 57, 53, 0.3);
-}
-.product-shape[data-emotion="angry"][data-variant="2"] .shape-face {
-    border-radius: 38% 62% 32% 68% / 62% 38% 68% 32%;
-    background: rgba(229, 57, 53, 0.3);
-}
-.product-shape[data-emotion="angry"][data-variant="3"] .shape-face {
-    border-radius: 32% 68% 38% 62% / 68% 32% 62% 38%;
-    background: rgba(229, 57, 53, 0.3);
-}
-.product-shape[data-emotion="angry"][data-variant="4"] .shape-face {
-    border-radius: 37% 63% 33% 67% / 63% 37% 67% 33%;
-    background: rgba(229, 57, 53, 0.3);
-}
-
-/* Excited - 4 variants */
-.product-shape[data-emotion="excited"][data-variant="1"] .shape-face {
-    border-radius: 50% 50% 20% 80% / 80% 20% 80% 20%;
-    background: rgba(255, 110, 199, 0.3);
-}
-.product-shape[data-emotion="excited"][data-variant="2"] .shape-face {
-    border-radius: 55% 45% 25% 75% / 75% 25% 85% 15%;
-    background: rgba(255, 110, 199, 0.3);
-}
-.product-shape[data-emotion="excited"][data-variant="3"] .shape-face {
-    border-radius: 45% 55% 15% 85% / 85% 15% 75% 25%;
-    background: rgba(255, 110, 199, 0.3);
-}
-.product-shape[data-emotion="excited"][data-variant="4"] .shape-face {
-    border-radius: 52% 48% 22% 78% / 78% 22% 82% 18%;
-    background: rgba(255, 110, 199, 0.3);
-}
-
-/* Nostalgic - 4 variants */
-.product-shape[data-emotion="nostalgic"][data-variant="1"] .shape-face {
-    border-radius: 55% 45% 45% 55% / 45% 55% 45% 55%;
-    background: rgba(179, 157, 219, 0.3);
-}
-.product-shape[data-emotion="nostalgic"][data-variant="2"] .shape-face {
-    border-radius: 52% 48% 48% 52% / 48% 52% 48% 52%;
-    background: rgba(179, 157, 219, 0.3);
-}
-.product-shape[data-emotion="nostalgic"][data-variant="3"] .shape-face {
-    border-radius: 58% 42% 42% 58% / 42% 58% 42% 58%;
-    background: rgba(179, 157, 219, 0.3);
-}
-.product-shape[data-emotion="nostalgic"][data-variant="4"] .shape-face {
-    border-radius: 53% 47% 47% 53% / 47% 53% 47% 53%;
-    background: rgba(179, 157, 219, 0.3);
-}
-
-/* Hopeful - 4 variants */
-.product-shape[data-emotion="hopeful"][data-variant="1"] .shape-face {
-    border-radius: 50% 50% 50% 50% / 60% 40% 60% 40%;
-    background: rgba(129, 199, 132, 0.3);
-}
-.product-shape[data-emotion="hopeful"][data-variant="2"] .shape-face {
-    border-radius: 48% 52% 52% 48% / 58% 42% 58% 42%;
-    background: rgba(129, 199, 132, 0.3);
-}
-.product-shape[data-emotion="hopeful"][data-variant="3"] .shape-face {
-    border-radius: 52% 48% 48% 52% / 62% 38% 62% 38%;
-    background: rgba(129, 199, 132, 0.3);
-}
-.product-shape[data-emotion="hopeful"][data-variant="4"] .shape-face {
-    border-radius: 51% 49% 49% 51% / 59% 41% 61% 39%;
-    background: rgba(129, 199, 132, 0.3);
-}
-
-/* Emotion-specific backgrounds for product cards with variations */
-.product-shape[data-emotion="happy"][data-variant="1"] { --product-bg: #fff9e6; }
-.product-shape[data-emotion="happy"][data-variant="2"] { --product-bg: #fffaeb; }
-.product-shape[data-emotion="happy"][data-variant="3"] { --product-bg: #fffbed; }
-.product-shape[data-emotion="happy"][data-variant="4"] { --product-bg: #fff8e1; }
-
-.product-shape[data-emotion="sad"][data-variant="1"] { --product-bg: #e6f3ff; }
-.product-shape[data-emotion="sad"][data-variant="2"] { --product-bg: #e8f4ff; }
-.product-shape[data-emotion="sad"][data-variant="3"] { --product-bg: #e3f2fd; }
-.product-shape[data-emotion="sad"][data-variant="4"] { --product-bg: #e1f1ff; }
-
-.product-shape[data-emotion="calm"][data-variant="1"] { --product-bg: #e1f5fe; }
-.product-shape[data-emotion="calm"][data-variant="2"] { --product-bg: #e0f7fa; }
-.product-shape[data-emotion="calm"][data-variant="3"] { --product-bg: #e3f6fd; }
-.product-shape[data-emotion="calm"][data-variant="4"] { --product-bg: #dff4fb; }
-
-.product-shape[data-emotion="anxious"][data-variant="1"] { --product-bg: #ede7f6; }
-.product-shape[data-emotion="anxious"][data-variant="2"] { --product-bg: #efe9f7; }
-.product-shape[data-emotion="anxious"][data-variant="3"] { --product-bg: #ebe5f5; }
-.product-shape[data-emotion="anxious"][data-variant="4"] { --product-bg: #f0eaf8; }
-
-.product-shape[data-emotion="angry"][data-variant="1"] { --product-bg: #ffcdd2; }
-.product-shape[data-emotion="angry"][data-variant="2"] { --product-bg: #ffcfd4; }
-.product-shape[data-emotion="angry"][data-variant="3"] { --product-bg: #ffcbd0; }
-.product-shape[data-emotion="angry"][data-variant="4"] { --product-bg: #ffd1d5; }
-
-.product-shape[data-emotion="excited"][data-variant="1"] { --product-bg: #ffe6f0; }
-.product-shape[data-emotion="excited"][data-variant="2"] { --product-bg: #ffe8f2; }
-.product-shape[data-emotion="excited"][data-variant="3"] { --product-bg: #ffe4ee; }
-.product-shape[data-emotion="excited"][data-variant="4"] { --product-bg: #ffeaf4; }
-
-.product-shape[data-emotion="nostalgic"][data-variant="1"] { --product-bg: #f3e5f5; }
-.product-shape[data-emotion="nostalgic"][data-variant="2"] { --product-bg: #f5e7f7; }
-.product-shape[data-emotion="nostalgic"][data-variant="3"] { --product-bg: #f1e3f3; }
-.product-shape[data-emotion="nostalgic"][data-variant="4"] { --product-bg: #f4e6f6; }
-
-.product-shape[data-emotion="hopeful"][data-variant="1"] { --product-bg: #d4f1d4; }
-.product-shape[data-emotion="hopeful"][data-variant="2"] { --product-bg: #d6f2d6; }
-.product-shape[data-emotion="hopeful"][data-variant="3"] { --product-bg: #d2f0d2; }
-.product-shape[data-emotion="hopeful"][data-variant="4"] { --product-bg: #d5f1d5; }
-
-.product-card .product-image {
-    background: var(--product-bg, #f5f1e8);
-}
-
-/* Emotion-specific facial expressions for product shapes with variants */
-/* Happy - 4 expression variants */
-.product-shape[data-emotion="happy"][data-variant="1"] .shape-mouth {
-    width: 28px;
-    height: 14px;
-}
-.product-shape[data-emotion="happy"][data-variant="1"] .shape-eyes {
-    gap: 16px;
-}
-
-.product-shape[data-emotion="happy"][data-variant="2"] .shape-mouth {
-    width: 26px;
-    height: 12px;
-}
-.product-shape[data-emotion="happy"][data-variant="2"] .shape-eyes {
-    gap: 18px;
-}
-.product-shape[data-emotion="happy"][data-variant="2"] .shape-eye {
-    width: 11px;
-    height: 11px;
-}
-
-.product-shape[data-emotion="happy"][data-variant="3"] .shape-mouth {
-    width: 30px;
-    height: 16px;
-}
-.product-shape[data-emotion="happy"][data-variant="3"] .shape-eyes {
-    gap: 14px;
-}
-.product-shape[data-emotion="happy"][data-variant="3"] .shape-eye {
-    width: 9px;
-    height: 9px;
-}
-
-.product-shape[data-emotion="happy"][data-variant="4"] .shape-mouth {
-    width: 24px;
-    height: 13px;
-    border-radius: 0 0 20px 20px;
-}
-.product-shape[data-emotion="happy"][data-variant="4"] .shape-eyes {
-    gap: 17px;
-}
-.product-shape[data-emotion="happy"][data-variant="4"] .shape-eye {
-    width: 10px;
-    height: 11px;
-}
-
-/* Sad - 4 expression variants */
-.product-shape[data-emotion="sad"][data-variant="1"] .shape-eye {
-    width: 9px;
-    height: 9px;
-}
-.product-shape[data-emotion="sad"][data-variant="1"] .shape-mouth {
-    width: 24px;
-    height: 12px;
-    border: 2.5px solid #2d2d2d;
-    border-bottom: none;
-    border-top: 2.5px solid #2d2d2d;
-    border-radius: 24px 24px 0 0;
-    transform: translateY(4px);
-}
-.product-shape[data-emotion="sad"][data-variant="1"] .shape-eyes {
-    gap: 16px;
-}
-
-.product-shape[data-emotion="sad"][data-variant="2"] .shape-eye {
-    width: 8px;
-    height: 10px;
-}
-.product-shape[data-emotion="sad"][data-variant="2"] .shape-mouth {
-    width: 22px;
-    height: 11px;
-    border: 2.5px solid #2d2d2d;
-    border-bottom: none;
-    border-top: 2.5px solid #2d2d2d;
-    border-radius: 22px 22px 0 0;
-    transform: translateY(5px);
-}
-.product-shape[data-emotion="sad"][data-variant="2"] .shape-eyes {
-    gap: 18px;
-}
-
-.product-shape[data-emotion="sad"][data-variant="3"] .shape-eye {
-    width: 10px;
-    height: 8px;
-}
-.product-shape[data-emotion="sad"][data-variant="3"] .shape-mouth {
-    width: 26px;
-    height: 13px;
-    border: 2.5px solid #2d2d2d;
-    border-bottom: none;
-    border-top: 2.5px solid #2d2d2d;
-    border-radius: 26px 26px 0 0;
-    transform: translateY(3px);
-}
-.product-shape[data-emotion="sad"][data-variant="3"] .shape-eyes {
-    gap: 14px;
-}
-
-.product-shape[data-emotion="sad"][data-variant="4"] .shape-eye {
-    width: 8.5px;
-    height: 8.5px;
-}
-.product-shape[data-emotion="sad"][data-variant="4"] .shape-mouth {
-    width: 20px;
-    height: 10px;
-    border: 2.5px solid #2d2d2d;
-    border-bottom: none;
-    border-top: 2.5px solid #2d2d2d;
-    border-radius: 20px 20px 0 0;
-    transform: translateY(4.5px);
-}
-.product-shape[data-emotion="sad"][data-variant="4"] .shape-eyes {
-    gap: 17px;
-}
-
-/* Calm - 4 expression variants */
-.product-shape[data-emotion="calm"][data-variant="1"] .shape-eye {
-    height: 5px;
-    border-radius: 2px;
-}
-.product-shape[data-emotion="calm"][data-variant="1"] .shape-mouth {
-    width: 22px;
-    height: 8px;
-}
-.product-shape[data-emotion="calm"][data-variant="1"] .shape-eyes {
-    gap: 16px;
-}
-
-.product-shape[data-emotion="calm"][data-variant="2"] .shape-eye {
-    height: 4px;
-    width: 11px;
-    border-radius: 2px;
-}
-.product-shape[data-emotion="calm"][data-variant="2"] .shape-mouth {
-    width: 20px;
-    height: 7px;
-}
-.product-shape[data-emotion="calm"][data-variant="2"] .shape-eyes {
-    gap: 18px;
-}
-
-.product-shape[data-emotion="calm"][data-variant="3"] .shape-eye {
-    height: 6px;
-    width: 9px;
-    border-radius: 2px;
-}
-.product-shape[data-emotion="calm"][data-variant="3"] .shape-mouth {
-    width: 24px;
-    height: 9px;
-}
-.product-shape[data-emotion="calm"][data-variant="3"] .shape-eyes {
-    gap: 14px;
-}
-
-.product-shape[data-emotion="calm"][data-variant="4"] .shape-eye {
-    height: 4.5px;
-    width: 10px;
-    border-radius: 2px;
-}
-.product-shape[data-emotion="calm"][data-variant="4"] .shape-mouth {
-    width: 21px;
-    height: 7.5px;
-}
-.product-shape[data-emotion="calm"][data-variant="4"] .shape-eyes {
-    gap: 17px;
-}
-
-/* Anxious - 4 expression variants */
-.product-shape[data-emotion="anxious"][data-variant="1"] .shape-eye {
-    width: 8px;
-    height: 11px;
-}
-.product-shape[data-emotion="anxious"][data-variant="1"] .shape-mouth {
-    width: 20px;
-    height: 5px;
-    border-radius: 0;
-    border: 2px solid #2d2d2d;
-    border-top: none;
-    border-bottom: none;
-    border-left: none;
-    border-right: none;
-    background: #2d2d2d;
-}
-.product-shape[data-emotion="anxious"][data-variant="1"] .shape-eyes {
-    gap: 16px;
-}
-
-.product-shape[data-emotion="anxious"][data-variant="2"] .shape-eye {
-    width: 7px;
-    height: 12px;
-}
-.product-shape[data-emotion="anxious"][data-variant="2"] .shape-mouth {
-    width: 18px;
-    height: 4px;
-    border-radius: 0;
-    border: 1.5px solid #2d2d2d;
-    border-top: none;
-    border-bottom: none;
-    border-left: none;
-    border-right: none;
-    background: #2d2d2d;
-}
-.product-shape[data-emotion="anxious"][data-variant="2"] .shape-eyes {
-    gap: 18px;
-}
-
-.product-shape[data-emotion="anxious"][data-variant="3"] .shape-eye {
-    width: 9px;
-    height: 10px;
-}
-.product-shape[data-emotion="anxious"][data-variant="3"] .shape-mouth {
-    width: 22px;
-    height: 6px;
-    border-radius: 0;
-    border: 2px solid #2d2d2d;
-    border-top: none;
-    border-bottom: none;
-    border-left: none;
-    border-right: none;
-    background: #2d2d2d;
-}
-.product-shape[data-emotion="anxious"][data-variant="3"] .shape-eyes {
-    gap: 14px;
-}
-
-.product-shape[data-emotion="anxious"][data-variant="4"] .shape-eye {
-    width: 7.5px;
-    height: 11.5px;
-}
-.product-shape[data-emotion="anxious"][data-variant="4"] .shape-mouth {
-    width: 19px;
-    height: 4.5px;
-    border-radius: 0;
-    border: 2px solid #2d2d2d;
-    border-top: none;
-    border-bottom: none;
-    border-left: none;
-    border-right: none;
-    background: #2d2d2d;
-}
-.product-shape[data-emotion="anxious"][data-variant="4"] .shape-eyes {
-    gap: 17px;
-}
-
-/* Angry - 4 expression variants with eyebrows */
-.product-shape[data-emotion="angry"] .shape-eyes {
-    position: relative;
-}
-
-.product-shape[data-emotion="angry"][data-variant="1"] .shape-eyes::before {
-    content: '';
-    position: absolute;
-    top: -7px;
-    left: -3px;
-    width: 18px;
-    height: 5px;
-    background: #2d2d2d;
-    border-radius: 1px;
-    transform: rotate(-25deg);
-}
-.product-shape[data-emotion="angry"][data-variant="1"] .shape-eyes::after {
-    content: '';
-    position: absolute;
-    top: -7px;
-    right: -3px;
-    width: 18px;
-    height: 5px;
-    background: #2d2d2d;
-    border-radius: 1px;
-    transform: rotate(25deg);
-}
-.product-shape[data-emotion="angry"][data-variant="1"] .shape-eye {
-    width: 9px;
-    height: 11px;
-    border-radius: 40%;
-}
-.product-shape[data-emotion="angry"][data-variant="1"] .shape-mouth {
-    width: 26px;
-    height: 18px;
-    border: 3.5px solid #2d2d2d;
-    border-bottom: none;
-    border-top: 3.5px solid #2d2d2d;
-    border-radius: 28px 28px 0 0;
-    transform: translateY(3px);
-}
-.product-shape[data-emotion="angry"][data-variant="1"] .shape-eyes {
-    gap: 16px;
-}
-
-.product-shape[data-emotion="angry"][data-variant="2"] .shape-eyes::before {
-    content: '';
-    position: absolute;
-    top: -8px;
-    left: -2px;
-    width: 16px;
-    height: 4px;
-    background: #2d2d2d;
-    border-radius: 1px;
-    transform: rotate(-28deg);
-}
-.product-shape[data-emotion="angry"][data-variant="2"] .shape-eyes::after {
-    content: '';
-    position: absolute;
-    top: -8px;
-    right: -2px;
-    width: 16px;
-    height: 4px;
-    background: #2d2d2d;
-    border-radius: 1px;
-    transform: rotate(28deg);
-}
-.product-shape[data-emotion="angry"][data-variant="2"] .shape-eye {
-    width: 8px;
-    height: 12px;
-    border-radius: 40%;
-}
-.product-shape[data-emotion="angry"][data-variant="2"] .shape-mouth {
-    width: 24px;
-    height: 16px;
-    border: 3px solid #2d2d2d;
-    border-bottom: none;
-    border-top: 3px solid #2d2d2d;
-    border-radius: 26px 26px 0 0;
-    transform: translateY(4px);
-}
-.product-shape[data-emotion="angry"][data-variant="2"] .shape-eyes {
-    gap: 18px;
-}
-
-.product-shape[data-emotion="angry"][data-variant="3"] .shape-eyes::before {
-    content: '';
-    position: absolute;
-    top: -6px;
-    left: -4px;
-    width: 20px;
-    height: 5.5px;
-    background: #2d2d2d;
-    border-radius: 1px;
-    transform: rotate(-22deg);
-}
-.product-shape[data-emotion="angry"][data-variant="3"] .shape-eyes::after {
-    content: '';
-    position: absolute;
-    top: -6px;
-    right: -4px;
-    width: 20px;
-    height: 5.5px;
-    background: #2d2d2d;
-    border-radius: 1px;
-    transform: rotate(22deg);
-}
-.product-shape[data-emotion="angry"][data-variant="3"] .shape-eye {
-    width: 10px;
-    height: 10px;
-    border-radius: 40%;
-}
-.product-shape[data-emotion="angry"][data-variant="3"] .shape-mouth {
-    width: 28px;
-    height: 20px;
-    border: 4px solid #2d2d2d;
-    border-bottom: none;
-    border-top: 4px solid #2d2d2d;
-    border-radius: 30px 30px 0 0;
-    transform: translateY(2px);
-}
-.product-shape[data-emotion="angry"][data-variant="3"] .shape-eyes {
-    gap: 14px;
-}
-
-.product-shape[data-emotion="angry"][data-variant="4"] .shape-eyes::before {
-    content: '';
-    position: absolute;
-    top: -7.5px;
-    left: -3px;
-    width: 17px;
-    height: 4.5px;
-    background: #2d2d2d;
-    border-radius: 1px;
-    transform: rotate(-26deg);
-}
-.product-shape[data-emotion="angry"][data-variant="4"] .shape-eyes::after {
-    content: '';
-    position: absolute;
-    top: -7.5px;
-    right: -3px;
-    width: 17px;
-    height: 4.5px;
-    background: #2d2d2d;
-    border-radius: 1px;
-    transform: rotate(26deg);
-}
-.product-shape[data-emotion="angry"][data-variant="4"] .shape-eye {
-    width: 8.5px;
-    height: 11.5px;
-    border-radius: 40%;
-}
-.product-shape[data-emotion="angry"][data-variant="4"] .shape-mouth {
-    width: 25px;
-    height: 17px;
-    border: 3.5px solid #2d2d2d;
-    border-bottom: none;
-    border-top: 3.5px solid #2d2d2d;
-    border-radius: 27px 27px 0 0;
-    transform: translateY(3.5px);
-}
-.product-shape[data-emotion="angry"][data-variant="4"] .shape-eyes {
-    gap: 17px;
-}
-
-/* Excited - 4 expression variants with star eyes */
-.product-shape[data-emotion="excited"][data-variant="1"] .shape-eye {
-    width: 12px;
-    height: 12px;
-    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-}
-.product-shape[data-emotion="excited"][data-variant="1"] .shape-mouth {
-    width: 26px;
-    height: 18px;
-    border-radius: 50%;
-    border-top: 2.5px solid #2d2d2d;
-}
-.product-shape[data-emotion="excited"][data-variant="1"] .shape-eyes {
-    gap: 16px;
-}
-
-.product-shape[data-emotion="excited"][data-variant="2"] .shape-eye {
-    width: 13px;
-    height: 13px;
-    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-}
-.product-shape[data-emotion="excited"][data-variant="2"] .shape-mouth {
-    width: 24px;
-    height: 16px;
-    border-radius: 50%;
-    border-top: 2.5px solid #2d2d2d;
-}
-.product-shape[data-emotion="excited"][data-variant="2"] .shape-eyes {
-    gap: 18px;
-}
-
-.product-shape[data-emotion="excited"][data-variant="3"] .shape-eye {
-    width: 11px;
-    height: 11px;
-    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-}
-.product-shape[data-emotion="excited"][data-variant="3"] .shape-mouth {
-    width: 28px;
-    height: 20px;
-    border-radius: 50%;
-    border-top: 3px solid #2d2d2d;
-}
-.product-shape[data-emotion="excited"][data-variant="3"] .shape-eyes {
-    gap: 14px;
-}
-
-.product-shape[data-emotion="excited"][data-variant="4"] .shape-eye {
-    width: 12.5px;
-    height: 12.5px;
-    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-}
-.product-shape[data-emotion="excited"][data-variant="4"] .shape-mouth {
-    width: 25px;
-    height: 17px;
-    border-radius: 50%;
-    border-top: 2.5px solid #2d2d2d;
-}
-.product-shape[data-emotion="excited"][data-variant="4"] .shape-eyes {
-    gap: 17px;
-}
-
-/* Nostalgic - 4 expression variants */
-.product-shape[data-emotion="nostalgic"][data-variant="1"] .shape-eyes {
-    gap: 18px;
-}
-.product-shape[data-emotion="nostalgic"][data-variant="1"] .shape-eye {
-    width: 9px;
-    height: 9px;
-}
-.product-shape[data-emotion="nostalgic"][data-variant="1"] .shape-mouth {
-    width: 22px;
-    height: 9px;
-}
-
-.product-shape[data-emotion="nostalgic"][data-variant="2"] .shape-eyes {
-    gap: 20px;
-}
-.product-shape[data-emotion="nostalgic"][data-variant="2"] .shape-eye {
-    width: 8px;
-    height: 8px;
-}
-.product-shape[data-emotion="nostalgic"][data-variant="2"] .shape-mouth {
-    width: 20px;
-    height: 8px;
-}
-
-.product-shape[data-emotion="nostalgic"][data-variant="3"] .shape-eyes {
-    gap: 16px;
-}
-.product-shape[data-emotion="nostalgic"][data-variant="3"] .shape-eye {
-    width: 10px;
-    height: 10px;
-}
-.product-shape[data-emotion="nostalgic"][data-variant="3"] .shape-mouth {
-    width: 24px;
-    height: 10px;
-}
-
-.product-shape[data-emotion="nostalgic"][data-variant="4"] .shape-eyes {
-    gap: 19px;
-}
-.product-shape[data-emotion="nostalgic"][data-variant="4"] .shape-eye {
-    width: 8.5px;
-    height: 9px;
-}
-.product-shape[data-emotion="nostalgic"][data-variant="4"] .shape-mouth {
-    width: 21px;
-    height: 8.5px;
-}
-
-/* Hopeful - 4 expression variants */
-.product-shape[data-emotion="hopeful"][data-variant="1"] .shape-eye {
-    width: 10px;
-    height: 11px;
-}
-.product-shape[data-emotion="hopeful"][data-variant="1"] .shape-mouth {
-    width: 26px;
-    height: 12px;
-}
-.product-shape[data-emotion="hopeful"][data-variant="1"] .shape-eyes {
-    gap: 16px;
-}
-
-.product-shape[data-emotion="hopeful"][data-variant="2"] .shape-eye {
-    width: 11px;
-    height: 10px;
-}
-.product-shape[data-emotion="hopeful"][data-variant="2"] .shape-mouth {
-    width: 24px;
-    height: 11px;
-}
-.product-shape[data-emotion="hopeful"][data-variant="2"] .shape-eyes {
-    gap: 18px;
-}
-
-.product-shape[data-emotion="hopeful"][data-variant="3"] .shape-eye {
-    width: 9px;
-    height: 12px;
-}
-.product-shape[data-emotion="hopeful"][data-variant="3"] .shape-mouth {
-    width: 28px;
-    height: 13px;
-}
-.product-shape[data-emotion="hopeful"][data-variant="3"] .shape-eyes {
-    gap: 14px;
-}
-
-.product-shape[data-emotion="hopeful"][data-variant="4"] .shape-eye {
-    width: 10.5px;
-    height: 11.5px;
-}
-.product-shape[data-emotion="hopeful"][data-variant="4"] .shape-mouth {
-    width: 25px;
-    height: 11.5px;
-}
-.product-shape[data-emotion="hopeful"][data-variant="4"] .shape-eyes {
-    gap: 17px;
-}
-
-.product-info {
-    padding: 1.5rem;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.product-emotions {
-    display: flex;
-    gap: 0.5rem;
-    margin-bottom: 0.75rem;
-    flex-wrap: wrap;
-}
-
-.emotion-tag {
-    background: var(--primary-color);
-    color: white;
-    padding: 0.35rem 0.85rem;
-    border-radius: 20px;
-    font-size: 0.7rem;
-    font-weight: 600;
-    text-transform: capitalize;
-}
-
-.product-name {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    color: var(--text-primary);
-}
-
-.product-description {
-    color: var(--text-secondary);
-    font-size: 0.875rem;
-    margin-bottom: 1rem;
-    flex: 1;
-}
-
-.product-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: auto;
-}
-
-.product-price {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--primary-color);
-}
-
-.add-to-cart-btn {
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 25px;
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 0.875rem;
-    transition: all 0.3s ease;
-    box-shadow: var(--shadow);
-}
-
-.add-to-cart-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
-    background: var(--secondary-color);
-}
-
-.add-to-cart-btn:active {
-    transform: translateY(0);
-}
-
-/* Cart Modal */
-.cart-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(4px);
-    z-index: 1000;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-}
-
-.cart-modal.active {
-    display: flex;
-}
-
-.cart-content {
-    background: white;
-    border-radius: 20px;
-    max-width: 600px;
-    width: 100%;
-    max-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    box-shadow: var(--shadow-lg);
-}
-
-.cart-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.cart-header h2 {
-    font-size: 1.5rem;
-}
-
-.close-btn {
-    background: none;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-    color: var(--text-secondary);
-    transition: color 0.3s ease;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-}
-
-.close-btn:hover {
-    color: var(--text-primary);
-    background: var(--background);
-}
-
-.cart-items {
-    flex: 1;
-    overflow-y: auto;
-    padding: 2rem;
-}
-
-.cart-item {
-    display: flex;
-    gap: 1rem;
-    padding: 1rem;
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    margin-bottom: 1rem;
-    background: var(--background);
-}
-
-.cart-item-image {
-    width: 80px;
-    height: 80px;
-    border-radius: 12px;
-    background: #ffe6f0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-/* Emotion-specific backgrounds for cart items */
-.cart-item-image[data-emotion="happy"] { background: #fff9e6; }
-.cart-item-image[data-emotion="sad"] { background: #e6f3ff; }
-.cart-item-image[data-emotion="calm"] { background: #e1f5fe; }
-.cart-item-image[data-emotion="anxious"] { background: #ede7f6; }
-.cart-item-image[data-emotion="angry"] { background: #ffcdd2; }
-.cart-item-image[data-emotion="excited"] { background: #ffe6f0; }
-.cart-item-image[data-emotion="nostalgic"] { background: #f3e5f5; }
-.cart-item-image[data-emotion="hopeful"] { background: #d4f1d4; }
-
-.cart-shape {
-    width: 50px;
-    height: 50px;
-    background: rgba(255, 255, 255, 0.4);
-    border-radius: 50% 50% 20% 80% / 80% 20% 80% 20%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-}
-
-/* Emotion-specific shapes for cart items */
-.cart-item-image[data-emotion="happy"] .cart-shape {
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    background: rgba(255, 235, 59, 0.4);
-}
-
-.cart-item-image[data-emotion="sad"] .cart-shape {
-    border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
-    background: rgba(92, 138, 168, 0.4);
-}
-
-.cart-item-image[data-emotion="calm"] .cart-shape {
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    background: rgba(129, 212, 250, 0.4);
-}
-
-.cart-item-image[data-emotion="anxious"] .cart-shape {
-    border-radius: 45% 55% 50% 50% / 55% 45% 55% 45%;
-    background: rgba(149, 117, 205, 0.4);
-}
-
-.cart-item-image[data-emotion="angry"] .cart-shape {
-    border-radius: 35% 65% 35% 65% / 65% 35% 65% 35%;
-    background: rgba(229, 57, 53, 0.4);
-}
-
-.cart-item-image[data-emotion="excited"] .cart-shape {
-    border-radius: 50% 50% 20% 80% / 80% 20% 80% 20%;
-    background: rgba(255, 110, 199, 0.4);
-}
-
-.cart-item-image[data-emotion="nostalgic"] .cart-shape {
-    border-radius: 55% 45% 45% 55% / 45% 55% 45% 55%;
-    background: rgba(179, 157, 219, 0.4);
-}
-
-.cart-item-image[data-emotion="hopeful"] .cart-shape {
-    border-radius: 50% 50% 50% 50% / 60% 40% 60% 40%;
-    background: rgba(129, 199, 132, 0.4);
-}
-
-.cart-shape-eyes {
-    display: flex;
-    gap: 10px;
-}
-
-.cart-shape-eye {
-    width: 6px;
-    height: 6px;
-    background: #2d2d2d;
-    border-radius: 50%;
-}
-
-.cart-shape-mouth {
-    width: 14px;
-    height: 7px;
-    border: 2px solid #2d2d2d;
-    border-top: none;
-    border-radius: 0 0 14px 14px;
-}
-
-/* Emotion-specific facial expressions for cart shapes */
-.cart-item-image[data-emotion="happy"] .cart-shape-mouth {
-    width: 18px;
-    height: 9px;
-}
-
-.cart-item-image[data-emotion="sad"] .cart-shape-mouth {
-    width: 16px;
-    height: 8px;
-    border: 2px solid #2d2d2d;
-    border-bottom: none;
-    border-top: 2px solid #2d2d2d;
-    border-radius: 16px 16px 0 0;
-    transform: translateY(3px);
-}
-
-.cart-item-image[data-emotion="calm"] .cart-shape-eye {
-    height: 3px;
-    border-radius: 2px;
-}
-
-.cart-item-image[data-emotion="calm"] .cart-shape-mouth {
-    width: 14px;
-    height: 5px;
-}
-
-.cart-item-image[data-emotion="anxious"] .cart-shape-eye {
-    width: 5px;
-    height: 7px;
-}
-
-.cart-item-image[data-emotion="anxious"] .cart-shape-mouth {
-    width: 12px;
-    height: 3px;
-    border: 1.5px solid #2d2d2d;
-    border-top: none;
-    border-bottom: none;
-    border-left: none;
-    border-right: none;
-    background: #2d2d2d;
-    border-radius: 0;
-}
-
-.cart-item-image[data-emotion="angry"] .cart-shape-eyes {
-    position: relative;
-}
-
-.cart-item-image[data-emotion="angry"] .cart-shape-eyes::before {
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: -2px;
-    width: 12px;
-    height: 3px;
-    background: #2d2d2d;
-    border-radius: 1px;
-    transform: rotate(-25deg);
-}
-
-.cart-item-image[data-emotion="angry"] .cart-shape-eyes::after {
-    content: '';
-    position: absolute;
-    top: -5px;
-    right: -2px;
-    width: 12px;
-    height: 3px;
-    background: #2d2d2d;
-    border-radius: 1px;
-    transform: rotate(25deg);
-}
-
-.cart-item-image[data-emotion="angry"] .cart-shape-eye {
-    width: 5px;
-    height: 7px;
-    border-radius: 40%;
-}
-
-.cart-item-image[data-emotion="angry"] .cart-shape-mouth {
-    width: 16px;
-    height: 11px;
-    border: 2.5px solid #2d2d2d;
-    border-bottom: none;
-    border-top: 2.5px solid #2d2d2d;
-    border-radius: 18px 18px 0 0;
-    transform: translateY(2px);
-}
-
-.cart-item-image[data-emotion="excited"] .cart-shape-eye {
-    width: 8px;
-    height: 8px;
-    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-}
-
-.cart-item-image[data-emotion="excited"] .cart-shape-mouth {
-    width: 16px;
-    height: 11px;
-    border-radius: 50%;
-    border-top: 2px solid #2d2d2d;
-}
-
-.cart-item-image[data-emotion="nostalgic"] .cart-shape-eyes {
-    gap: 12px;
-}
-
-.cart-item-image[data-emotion="nostalgic"] .cart-shape-eye {
-    width: 5px;
-    height: 5px;
-}
-
-.cart-item-image[data-emotion="nostalgic"] .cart-shape-mouth {
-    width: 14px;
-    height: 6px;
-}
-
-.cart-item-image[data-emotion="hopeful"] .cart-shape-eye {
-    width: 6px;
-    height: 7px;
-}
-
-.cart-item-image[data-emotion="hopeful"] .cart-shape-mouth {
-    width: 16px;
-    height: 8px;
-}
-
-.cart-item-details {
-    flex: 1;
-}
-
-.cart-item-name {
-    font-weight: 700;
-    margin-bottom: 0.25rem;
-}
-
-.cart-item-price {
-    color: var(--text-secondary);
-    font-size: 0.875rem;
-}
-
-.cart-item-actions {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-}
-
-.quantity-btn {
-    background: white;
-    border: 1px solid var(--border-color);
-    width: 28px;
-    height: 28px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: 700;
-    transition: all 0.2s ease;
-}
-
-.quantity-btn:hover {
-    background: var(--primary-color);
-    color: white;
-    border-color: var(--primary-color);
-}
-
-.quantity-display {
-    min-width: 30px;
-    text-align: center;
-    font-weight: 600;
-}
-
-.remove-btn {
-    background: none;
-    border: none;
-    color: var(--text-secondary);
-    cursor: pointer;
-    padding: 0.25rem 0.5rem;
-    font-size: 0.875rem;
-    transition: color 0.3s ease;
-    margin-left: auto;
-}
-
-.remove-btn:hover {
-    color: #ef4444;
-}
-
-.empty-cart {
-    text-align: center;
-    padding: 3rem;
-    color: var(--text-secondary);
-}
-
-.empty-cart-icon {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-}
-
-.cart-footer {
-    padding: 2rem;
-    border-top: 1px solid var(--border-color);
-    background: var(--background);
-}
-
-.cart-total {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5rem;
-    font-size: 1.25rem;
-    font-weight: 700;
-}
-
-.total-amount {
-    color: var(--primary-color);
-    font-size: 1.75rem;
-}
-
-.checkout-btn {
-    width: 100%;
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 1rem;
-    border-radius: 25px;
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    box-shadow: var(--shadow);
-}
-
-.checkout-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
-    background: var(--secondary-color);
-}
-
-.checkout-btn:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
-
-/* Footer */
-footer {
-    background: var(--primary-color);
-    color: white;
-    text-align: center;
-    padding: 2.5rem 0;
-    margin-top: 4rem;
-}
-
-footer p {
-    margin: 0.5rem 0;
-    opacity: 0.8;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .logo h1 {
-        font-size: 1.5rem;
+    white-space: nowrap;
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 1728px) {
+    .front-page {
+        width: 100vw;
+        height: auto;
+        min-height: 100vh;
     }
-
-    .tagline {
-        font-size: 0.75rem;
+    
+    .header-bg {
+        width: 100%;
     }
-
-    /* Hero Section Responsive */
-    .hero-section {
-        min-height: 400px;
-        padding: 3rem 0 2rem;
+    
+    /* Scale elements proportionally */
+    .title {
+        left: 5%;
+        font-size: 3.5vw;
     }
-
-    .hero-title {
-        font-size: 2.2rem;
+    
+    .cart-container {
+        left: 88%;
     }
-
-    .blob-1, .blob-2, .blob-3, .blob-4, .blob-5 {
-        opacity: 0.5;
+    
+    .feeling-text {
+        left: 52%;
+        font-size: 3.5vw;
     }
-
-    .blob-1 {
-        width: 100px;
-        height: 100px;
+    
+    .meditating-woman {
+        left: 33%;
+        width: 37%;
+        height: auto;
     }
-
-    .blob-2, .blob-4 {
-        width: 80px;
-        height: 80px;
+    
+    .detect-button {
+        left: 42%;
     }
-
-    .blob-3, .blob-5 {
-        width: 70px;
-        height: 70px;
-    }
-
-    .meditation-img {
-        max-width: 280px;
-    }
-
-    .detect-emotion-hero-btn {
-        padding: 0.875rem 2rem;
-        font-size: 1rem;
-    }
-
-    .emotion-filter h2 {
-        font-size: 1.5rem;
-    }
-
-    .emotion-buttons {
-        gap: 0.75rem;
-    }
-
-    .emotion-btn {
-        width: 100px;
-        height: 100px;
-    }
-
-    .emotion-btn .face {
-        width: 50px;
-        height: 50px;
-    }
-
-    .products-grid {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 1.5rem;
-    }
-
-    .products-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .cart-content {
-        max-height: 90vh;
-    }
-}
-
-@media (max-width: 480px) {
-    /* Hero Section Mobile */
-    .hero-section {
-        min-height: 350px;
-        padding: 2rem 0 1.5rem;
-    }
-
-    .hero-title {
-        font-size: 1.8rem;
-    }
-
-    .blob-1, .blob-2, .blob-3, .blob-4, .blob-5 {
-        opacity: 0.4;
-    }
-
-    .blob-1 {
-        width: 80px;
-        height: 80px;
-    }
-
-    .blob-2, .blob-4 {
-        width: 60px;
-        height: 60px;
-    }
-
-    .blob-3, .blob-5 {
-        width: 50px;
-        height: 50px;
-    }
-
-    .meditation-img {
-        max-width: 220px;
-    }
-
-    .detect-emotion-hero-btn {
-        padding: 0.75rem 1.5rem;
-        font-size: 0.95rem;
-    }
-
-    .products-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .emotion-btn {
-        width: 85px;
-        height: 85px;
-        font-size: 0.75rem;
-    }
-
-    .emotion-btn .face {
-        width: 45px;
-        height: 45px;
-    }
-
-    .cart-btn {
-        padding: 0.5rem 1rem;
-    }
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.product-card {
-    animation: fadeIn 0.5s ease-out;
-}
-
-/* Loading State */
-.loading {
-    text-align: center;
-    padding: 3rem;
-    color: var(--text-secondary);
-    font-size: 1.25rem;
-}
-
-/* Emotion Detection Modal */
-.emotion-detection-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 1000;
-    align-items: center;
-    justify-content: center;
-}
-
-.emotion-detection-modal.active {
-    display: flex;
-}
-
-.emotion-detection-content {
-    background: white;
-    border-radius: 20px;
-    padding: 2rem;
-    max-width: 640px;
-    width: 90%;
-    max-height: 90vh;
-    overflow-y: auto;
-    box-shadow: var(--shadow-lg);
-}
-
-.emotion-detection-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5rem;
-}
-
-.emotion-detection-header h2 {
-    font-size: 1.75rem;
-    color: var(--primary-color);
-    margin: 0;
-}
-
-.video-container {
-    position: relative;
-    width: 100%;
-    background: #000;
-    border-radius: 12px;
-    overflow: hidden;
-    margin-bottom: 1.5rem;
-}
-
-#videoElement {
-    width: 100%;
-    height: auto;
-    display: block;
-    transform: scaleX(-1);
-}
-
-#overlayCanvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: scaleX(-1);
-}
-
-.detection-status {
-    text-align: center;
-    padding: 1rem;
-    background: var(--background);
-    border-radius: 8px;
-    margin-bottom: 1rem;
-}
-
-.detection-status p {
-    margin: 0;
-    color: var(--text-secondary);
-    font-size: 1rem;
-}
-
-.detection-result {
-    text-align: center;
-    padding: 1.5rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    border-radius: 12px;
-    color: white;
-    animation: slideUp 0.5s ease-out;
-}
-
-.detection-result h3 {
-    margin: 0 0 0.5rem 0;
-    font-size: 1.5rem;
-}
-
-.detection-result #detectedEmotion {
-    text-transform: capitalize;
-    font-weight: 800;
-}
-
-.detection-result p {
-    margin: 0;
-    font-size: 1rem;
-    opacity: 0.9;
-}
-
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Receipt Modal */
-.receipt-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.85);
-    z-index: 1001;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-}
-
-.receipt-modal.active {
-    display: flex;
-}
-
-.receipt-content {
-    background: linear-gradient(to bottom, #fff9f0, #ffffff);
-    border-radius: 20px;
-    max-width: 600px;
-    width: 100%;
-    max-height: 90vh;
-    overflow-y: auto;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    border: 3px dashed var(--primary-color);
-    animation: receiptPop 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-@keyframes receiptPop {
-    0% {
-        opacity: 0;
-        transform: scale(0.5) rotate(-5deg);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1) rotate(0deg);
-    }
-}
-
-.receipt-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 2rem 1rem;
-    border-bottom: 2px dashed var(--border-color);
-}
-
-.receipt-header h2 {
-    font-size: 1.75rem;
-    color: var(--primary-color);
-    margin: 0;
-    font-weight: 800;
-}
-
-.receipt-body {
-    padding: 2rem;
-}
-
-.receipt-date {
-    text-align: center;
-    color: var(--text-secondary);
-    font-size: 0.875rem;
-    margin-bottom: 1rem;
-    font-family: 'Courier New', monospace;
-}
-
-.receipt-divider {
-    text-align: center;
-    color: var(--primary-color);
-    margin: 1.5rem 0;
-    font-size: 1.25rem;
-    opacity: 0.6;
-}
-
-.receipt-items {
-    margin: 1.5rem 0;
-}
-
-.receipt-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    border-left: 4px solid var(--primary-color);
-}
-
-.receipt-item-details {
-    flex: 1;
-}
-
-.receipt-item-name {
-    font-weight: 700;
-    font-size: 1.1rem;
-    color: var(--text-primary);
-    margin-bottom: 0.25rem;
-}
-
-.receipt-item-description {
-    font-size: 0.875rem;
-    color: var(--text-secondary);
-    font-style: italic;
-    margin-bottom: 0.5rem;
-}
-
-.receipt-item-emotions {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-}
-
-.receipt-emotion-tag {
-    background: var(--background);
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    color: var(--primary-color);
-    font-weight: 600;
-    text-transform: capitalize;
-}
-
-.receipt-item-price {
-    font-weight: 700;
-    color: var(--primary-color);
-    font-size: 1.1rem;
-    margin-left: 1rem;
-}
-
-.receipt-total {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem;
-    background: var(--primary-color);
-    color: white;
-    border-radius: 12px;
-    font-size: 1.5rem;
-    font-weight: 800;
-    margin: 1.5rem 0;
-}
-
-.emotional-insights {
-    margin: 2rem 0;
-}
-
-.emotional-insights h3 {
-    color: var(--primary-color);
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.emotion-meaning {
-    background: linear-gradient(135deg, #fffbf0, #fff);
-    padding: 1.25rem;
-    margin-bottom: 1rem;
-    border-radius: 12px;
-    border-left: 5px solid var(--accent-yellow);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-.emotion-meaning-title {
-    font-weight: 700;
-    font-size: 1.1rem;
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-    text-transform: capitalize;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.emotion-meaning-text {
-    color: var(--text-primary);
-    line-height: 1.6;
-    font-size: 0.95rem;
-}
-
-.encouragement-section {
-    margin: 2rem 0;
-}
-
-.encouragement-section h3 {
-    color: var(--primary-color);
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.encouragement-message {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: white;
-    padding: 2rem;
-    border-radius: 16px;
-    text-align: center;
-    font-size: 1.15rem;
-    line-height: 1.8;
-    font-weight: 500;
-    box-shadow: 0 8px 24px rgba(214, 69, 69, 0.3);
-}
-
-.encouragement-message strong {
-    font-weight: 800;
-    font-size: 1.2em;
-    display: block;
-    margin-bottom: 0.5rem;
-}
-
-.receipt-footer-note {
-    text-align: center;
-    margin-top: 2rem;
-    padding-top: 1.5rem;
-    border-top: 2px dashed var(--border-color);
-}
-
-.receipt-footer-note p {
-    color: var(--text-secondary);
-    font-size: 0.875rem;
-    margin: 0.5rem 0;
-}
-
-.receipt-actions {
-    display: flex;
-    gap: 1rem;
-    padding: 1.5rem 2rem 2rem;
-    border-top: 2px dashed var(--border-color);
-}
-
-.save-receipt-btn,
-.new-shopping-btn {
-    flex: 1;
-    padding: 1rem 1.5rem;
-    border: none;
-    border-radius: 50px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.save-receipt-btn {
-    background: linear-gradient(135deg, var(--accent-green), #45a049);
-    color: white;
-    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
-}
-
-.save-receipt-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(76, 175, 80, 0.4);
-}
-
-.new-shopping-btn {
-    background: white;
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
-}
-
-.new-shopping-btn:hover {
-    background: var(--primary-color);
-    color: white;
-    transform: translateY(-2px);
-}
-
-@media (max-width: 768px) {
-    .receipt-content {
-        max-width: 95%;
-        border-width: 2px;
-    }
-
-    .receipt-header {
-        padding: 1.5rem 1.5rem 1rem;
-    }
-
-    .receipt-header h2 {
-        font-size: 1.4rem;
-    }
-
-    .receipt-body {
-        padding: 1.5rem;
-    }
-
-    .receipt-actions {
-        flex-direction: column;
-        padding: 1rem 1.5rem 1.5rem;
-    }
-
-    .encouragement-message {
-        padding: 1.5rem;
-        font-size: 1rem;
+    
+    .double-down {
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
