@@ -7,7 +7,9 @@
 
 body {
     font-family: Arial, sans-serif;
-    overflow-x: hidden;
+    overflow-x: auto;
+    margin: 0;
+    padding: 0;
 }
 
 /* Main Container */
@@ -17,6 +19,7 @@ body {
     width: 1728px;
     height: 1117px;
     overflow: hidden;
+    margin: 0 auto;
 }
 
 /* Header Background */
@@ -169,6 +172,7 @@ body {
     left: 581px;
     top: 417px;
     width: 640px;
+    z-index: 10;
 }
 
 .meditating-woman img {
@@ -179,6 +183,7 @@ body {
     object-fit: contain;
     object-position: 50% 50%;
     pointer-events: none;
+    display: block;
 }
 
 /* "How are you feeling today?" Text */
@@ -194,6 +199,7 @@ body {
     top: 190px;
     transform: translateX(-50%);
     white-space: nowrap;
+    z-index: 15;
 }
 
 .feeling-text p {
@@ -208,6 +214,7 @@ body {
     height: 57px;
     top: 1060px;
     animation: bounce 2s infinite;
+    z-index: 20;
 }
 
 .double-down img {
@@ -245,6 +252,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 15px;
+    z-index: 20;
 }
 
 .detect-button:hover {
@@ -272,45 +280,20 @@ body {
     white-space: nowrap;
 }
 
-/* Responsive adjustments for smaller screens */
-@media screen and (max-width: 1728px) {
-    .front-page {
-        width: 100vw;
-        height: auto;
-        min-height: 100vh;
-    }
-    
-    .header-bg {
-        width: 100%;
-    }
-    
-    /* Scale elements proportionally */
-    .title {
-        left: 5%;
-        font-size: 3.5vw;
-    }
-    
-    .cart-container {
-        left: 88%;
-    }
-    
-    .feeling-text {
-        left: 52%;
-        font-size: 3.5vw;
-    }
-    
-    .meditating-woman {
-        left: 33%;
-        width: 37%;
-        height: auto;
-    }
-    
-    .detect-button {
-        left: 42%;
-    }
-    
-    .double-down {
-        left: 50%;
-        transform: translateX(-50%);
-    }
+/* Header and Cart have higher z-index */
+.header-bg {
+    z-index: 5;
+}
+
+.cart-container {
+    z-index: 100;
+}
+
+.title {
+    z-index: 10;
+}
+
+/* Ellipses stay in background */
+.ellipse {
+    z-index: 1;
 }
