@@ -78,17 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
         doubleDown.style.cursor = 'pointer';
     }
     
-    // Optional: Add parallax effect to decorative ellipses
-    window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
-        const ellipses = document.querySelectorAll('.ellipse');
-        
-        ellipses.forEach((ellipse, index) => {
-            const speed = 0.5 + (index * 0.1); // Different speeds for different ellipses
-            const yPos = -(scrolled * speed);
-            ellipse.style.transform += ` translateY(${yPos}px)`;
-        });
-    });
+    // Ellipses stay fixed in position (no parallax effect)
 });
 
 // Optional: Cart functionality example
