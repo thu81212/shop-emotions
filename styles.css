@@ -10,6 +10,11 @@ body {
     overflow-x: auto;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-color: #f5f1e8;
 }
 
 /* Main Container */
@@ -20,6 +25,7 @@ body {
     height: 1117px;
     overflow: hidden;
     margin: 0 auto;
+    flex-shrink: 0;
 }
 
 /* Header Background */
