@@ -22,10 +22,11 @@ body {
     background-color: #f5f1e8;
     position: relative;
     width: 1728px;
-    height: 1117px;
-    overflow: hidden;
+    min-height: 1117px;
+    overflow: visible;
     margin: 0 auto;
     flex-shrink: 0;
+    padding-bottom: 100px;
 }
 
 /* Header Background */
