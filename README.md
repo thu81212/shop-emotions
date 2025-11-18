@@ -1,157 +1,105 @@
-# Shop Emotions - E-Commerce Website
+# Shop Your Emotions 🎭
 
-An innovative e-commerce website where you can shop based on your emotions! Find products that match your mood and enhance your emotional well-being.
+A playful e-commerce landing page featuring emoticon products. Shop for different emotions with a fun, interactive interface!
 
 ## Features
 
-### Emotion-Based Shopping
-- Filter products by 7 different emotions:
-  - Happy
-  - Calm
-  - Excited
-  - Romantic
-  - Energetic
-  - Cozy
-  - Adventurous
+- 🎨 12 unique emoticon designs (happy, sad, shocked, relaxed, frustrated, and more)
+- 🛒 Interactive shopping cart with counter
+- ✨ Smooth animations and hover effects
+- 📱 Fully responsive design
+- 🎯 Product categories with tags (Happy, Fun)
+- ➕ Add to cart functionality with visual feedback
 
-### Product Catalog
-- 24 curated products across various categories
-- Each product tagged with relevant emotions
-- Beautiful emoji-based product images
-- Detailed product descriptions
+## Design
 
-### Shopping Cart
-- Add products to cart with one click
-- Adjust quantities easily
-- Remove items from cart
-- Real-time cart total calculation
-- Persistent cart (saves to local storage)
+This project is based on a Figma design featuring:
+- Warm color palette (#C5504B red, #F5F1E8 cream)
+- Custom fonts: Bagel Fat One, Fuzzy Bubbles, DM Sans
+- Clean product card layouts
+- Hand-drawn emoticon illustrations
 
-### User Experience
-- Modern, responsive design
-- Smooth animations and transitions
-- Mobile-friendly interface
-- Sorting options (price, name)
-- Keyboard shortcuts (ESC to close cart)
-
-## Getting Started
-
-### Prerequisites
-- A modern web browser (Chrome, Firefox, Safari, Edge)
-- Optional: Node.js and npm for local development server
-
-### Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/thu81212/shop-emotions.git
-cd shop-emotions
-```
-
-2. Open `index.html` in your browser, or use a local server:
-
-**Option A: Using Python**
-```bash
-python3 -m http.server 8080
-```
-
-**Option B: Using Node.js**
-```bash
-npm install -g http-server
-npm start
-```
-
-3. Open your browser and navigate to `http://localhost:8080`
-
-## Project Structure
+## File Structure
 
 ```
-shop-emotions/
+shop-your-emotions/
 ├── index.html          # Main HTML structure
-├── styles.css          # CSS styling and responsive design
-├── app.js             # Application logic and cart functionality
-├── products.js        # Product database
-├── package.json       # Project metadata
-├── .gitignore        # Git ignore file
-└── README.md         # This file
+├── styles.css          # All styling and responsive design
+├── script.js           # Interactive functionality
+└── README.md           # This file
 ```
 
-## How It Works
+## Installation
 
-### Emotion Filtering
-Click on any emotion button at the top of the page to filter products that match that mood. The product catalog will instantly update to show only relevant items.
+1. Clone this repository:
+```bash
+git clone https://github.com/yourusername/shop-your-emotions.git
+```
 
-### Adding to Cart
-1. Browse products by emotion or view all products
-2. Click "Add to Cart" on any product
-3. View your cart by clicking the cart button in the header
-4. Adjust quantities or remove items as needed
-5. Click "Proceed to Checkout" to complete your purchase
+2. Navigate to the project folder:
+```bash
+cd shop-your-emotions
+```
 
-### Sorting Products
-Use the sort dropdown to organize products by:
-- Price: Low to High
-- Price: High to Low
-- Name: A to Z
+3. Open `index.html` in your browser or use a local server:
+```bash
+# Using Python
+python -m http.server 8000
+
+# Using Node.js
+npx serve
+```
+
+4. Visit `http://localhost:8000` in your browser
+
+## Usage
+
+- **Browse Products**: Scroll through different emotion products
+- **Add to Cart**: Click the '+' button on any product card
+- **View Cart**: Click the shopping cart icon in the header
+- **Keyboard Shortcut**: Press 'C' to open the cart
 
 ## Technologies Used
 
-- **HTML5**: Semantic markup and structure
-- **CSS3**: Modern styling with flexbox and grid
-- **JavaScript (ES6+)**: Interactive functionality
-- **Local Storage API**: Persistent cart storage
+- HTML5
+- CSS3 (Flexbox, Animations, Custom Properties)
+- Vanilla JavaScript (ES6+)
+- Google Fonts
 
-## Features in Detail
+## Browser Support
 
-### Responsive Design
-The website is fully responsive and works seamlessly on:
-- Desktop computers
-- Tablets
-- Mobile phones
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
 
-### Color Scheme
-- Primary: Indigo (#6366f1)
-- Secondary: Pink (#ec4899)
-- Background: Light gray (#f8fafc)
-- Text: Dark slate (#1e293b)
+## Responsive Breakpoints
 
-### Accessibility
-- Semantic HTML elements
-- High contrast colors
-- Keyboard navigation support
-- Clear visual feedback
+- Desktop: 1400px and above
+- Tablet: 1024px - 1399px
+- Mobile: 768px and below
 
 ## Future Enhancements
 
-Potential features for future versions:
-- User authentication and accounts
-- Product reviews and ratings
-- Wishlist functionality
-- Multiple payment methods
-- Order history
-- Product recommendations based on emotion patterns
-- Advanced search functionality
-- Social sharing features
+- [ ] Add product detail pages
+- [ ] Implement actual checkout functionality
+- [ ] Add product filtering and sorting
+- [ ] Create a wishlist feature
+- [ ] Add more emoticon designs
+- [ ] Implement local storage for cart persistence
 
-## Contributing
+## Credits
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Design inspired by modern e-commerce interfaces with a playful twist.
 
 ## License
 
-This project is licensed under the MIT License.
+MIT License - feel free to use this project for learning or personal projects!
 
-## Acknowledgments
+## Contributing
 
-- Inspired by the concept of emotional intelligence in shopping
-- Built with love and emotions ❤️
-
-## Contact
-
-For questions or feedback, please open an issue on GitHub.
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
 
 ---
 
-**Happy Shopping! 🛍️**
-
-*Remember: Shop with your emotions, not just your wallet.*
+Made with ❤️ and lots of emotions
